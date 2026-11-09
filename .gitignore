@@ -1,0 +1,31 @@
+# ---- ESP-IDF build output and generated files (examples/) ----
+build/
+sdkconfig
+sdkconfig.old
+# generated from sdkconfig.defaults; keep sdkconfig.defaults tracked
+managed_components/
+dependencies.lock
+.cache/
+compile_commands.json
+
+# ---- Python (gui/server.py) ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ---- Runtime logs written by gui/server.py ----
+*.log
+
+# ---- Editors / OS ----
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# ---- Scratch files ----
+*.tmp
+*.bak
+*.orig
