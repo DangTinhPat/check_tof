@@ -1,0 +1,24 @@
+CONFIG_IDF_TARGET="esp32c6"
+# VL53L8CX needs a bigger main task stack (library README: >= 7168)
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=8192
+# Never wait forever on I2C: a stuck bus must return an error so the firmware can retry.
+# Must exceed the longest transfer (32 KB firmware chunk ~0.75 s at 400 kHz).
+CONFIG_VL53L8CX_I2C_TIMEOUT=y
+CONFIG_VL53L8CX_I2C_TIMEOUT_VALUE=3000
+
+# --- Throughput: only read what the viewer uses (distance, sigma, status) ---
+# Per 8x8 frame this cuts the I2C payload from ~1450 B to ~390 B (about 4x less bus time).
+CONFIG_VL53L8CX_DISABLE_AMBIENT_PER_SPAD=y
+CONFIG_VL53L8CX_DISABLE_NB_SPADS_ENABLED=y
+CONFIG_VL53L8CX_DISABLE_NB_TARGET_DETECTED=y
+CONFIG_VL53L8CX_DISABLE_SIGNAL_PER_SPAD=y
+CONFIG_VL53L8CX_DISABLE_REFLECTANCE_PERCENT=y
+CONFIG_VL53L8CX_DISABLE_MOTION_INDICATOR=y
+
+# --- Faster console: 330 B/frame takes ~29 ms at 115200 but ~4 ms at 921600 ---
+# (gui/server.py must use the same baud rate; its default is 921600)
+# The baud rate is only configurable when the console is CUSTOM (UART0 = the CH343 USB bridge,
+# default pins TX=16 RX=17 on ESP32-C6).
+CONFIG_ESP_CONSOLE_UART_CUSTOM=y
+CONFIG_ESP_CONSOLE_UART_NUM=0
+CONFIG_ESP_CONSOLE_UART_BAUDRATE=921600

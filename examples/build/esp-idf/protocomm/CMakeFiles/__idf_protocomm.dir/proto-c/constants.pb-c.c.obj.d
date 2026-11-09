@@ -1,0 +1,36 @@
+esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.obj: \
+ /home/dvt/esp/esp-idf/components/protocomm/proto-c/constants.pb-c.c \
+ /home/dvt/esp/esp-idf/components/protocomm/proto-c/constants.pb-c.h \
+ /home/dvt/esp/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h \
+ /home/dvt/esp/esp-idf/components/newlib/platform_include/assert.h \
+ /home/dvt/check_tof/examples/build/config/sdkconfig.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/stdlib.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/machine/ieeefp.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/_ansi.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/newlib.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/_newlib_version.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/sys/config.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/sys/features.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/14.2.0/include/stddef.h \
+ /home/dvt/esp/esp-idf/components/newlib/platform_include/sys/reent.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/sys/reent.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/_ansi.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/sys/_types.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/machine/_types.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/machine/_default_types.h \
+ /home/dvt/esp/esp-idf/components/newlib/platform_include/sys/lock.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/sys/lock.h \
+ /home/dvt/esp/esp-idf/components/newlib/platform_include/sys/cdefs.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/sys/cdefs.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/machine/stdlib.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/alloca.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/sys/_locale.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/14.2.0/include/stdint.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/stdint.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/sys/_intsup.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/sys/_stdint.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/assert.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/14.2.0/include/limits.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/14.2.0/include/syslimits.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/limits.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/sys/syslimits.h

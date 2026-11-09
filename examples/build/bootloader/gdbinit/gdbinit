@@ -1,0 +1,2 @@
+source /home/dvt/check_tof/examples/build/bootloader/gdbinit/symbols
+source /home/dvt/check_tof/examples/build/bootloader/gdbinit/connect

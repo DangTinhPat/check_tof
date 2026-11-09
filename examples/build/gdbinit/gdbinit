@@ -1,0 +1,2 @@
+source /home/dvt/check_tof/examples/build/gdbinit/symbols
+source /home/dvt/check_tof/examples/build/gdbinit/connect
