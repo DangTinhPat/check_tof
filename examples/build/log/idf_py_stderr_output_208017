@@ -1,5 +1,0 @@
-Command: make -j 18 all
-/home/dvt/check_tof/VL53L8CX-Library/src/vl53l8cx_api.c: In function 'vl53l8cx_get_ranging_data':
-/home/dvt/check_tof/VL53L8CX-Library/src/vl53l8cx_api.c:751:21: warning: unused variable 'j' [-Wunused-variable]
-  751 |         uint32_t i, j, msize;
-      |                     ^

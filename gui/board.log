@@ -1106,3 +1106,1689 @@
 2026-11-09 14:24:12  W (757393) check_tof: before restart: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
 2026-11-09 14:24:14  [server] lost: Mất kết nối USB (thiết bị đã ngắt) — đang chờ board cắm lại…
 2026-11-09 14:24:14  [server] noport: Không thấy board — hãy cắm cáp USB
+2026-11-10 09:02:08  [server] waiting: Đã mở /dev/ttyACM0 — chờ dữ liệu từ cảm biến…
+2026-11-10 09:02:08  [server] live: Đang nhận dữ liệu
+2026-11-10 09:03:51  W (284293) check_tof: Too many I2C errors (last status=255) - restarting sensor
+2026-11-10 09:03:51  W (284293) check_tof: before restart: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 09:03:51  W (284303) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 09:03:51  W (284303) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 09:03:51  E (284303) check_tof: Sensor start failed (attempt 1) - check wiring/pull-ups, retrying
+2026-11-10 09:03:52  W (284503) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 09:03:52  W (284503) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 09:03:52  E (284503) check_tof: Sensor start failed (attempt 2) - check wiring/pull-ups, retrying
+2026-11-10 09:03:52  I (284703) check_tof: Loading sensor firmware (takes a few seconds)...
+2026-11-10 09:03:52  W (285193) check_tof: vl53l8cx_init failed (status=3)
+2026-11-10 09:03:52  E (285193) check_tof: Sensor start failed (attempt 3) - check wiring/pull-ups, retrying
+2026-11-10 09:03:52  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 3) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 09:03:52  I (285393) check_tof: Loading sensor firmware (takes a few seconds)...
+2026-11-10 09:03:53  W (285803) check_tof: vl53l8cx_init failed (status=3)
+2026-11-10 09:03:53  E (285803) check_tof: Sensor start failed (attempt 4) - check wiring/pull-ups, retrying
+2026-11-10 09:03:53  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 4) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 09:03:53  I (286003) check_tof: Loading sensor firmware (takes a few seconds)...
+2026-11-10 09:03:55  I (288423) check_tof: VL53L8CX ready (ULD VL53L8CX_2.0.0), ranging 8x8 @ 15 Hz
+2026-11-10 09:03:56  [server] live: Đang nhận dữ liệu
+2026-11-10 09:04:23  W (315953) check_tof: Too many I2C errors (last status=3) - restarting sensor
+2026-11-10 09:04:23  W (315963) check_tof: before restart: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 09:04:26  [server] stale: Cổng mở nhưng không có frame — board đang khởi động lại cảm biến?
+2026-11-10 09:04:28  I (320973) check_tof: Loading sensor firmware (takes a few seconds)...
+2026-11-10 09:04:29  W (322103) check_tof: vl53l8cx_init failed (status=3)
+2026-11-10 09:04:29  E (322103) check_tof: Sensor start failed (attempt 1) - check wiring/pull-ups, retrying
+2026-11-10 09:04:29  W (322303) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 09:04:29  W (322303) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 09:04:29  E (322303) check_tof: Sensor start failed (attempt 2) - check wiring/pull-ups, retrying
+2026-11-10 09:04:30  W (322503) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 09:04:30  W (322503) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 09:04:30  E (322503) check_tof: Sensor start failed (attempt 3) - check wiring/pull-ups, retrying
+2026-11-10 09:04:30  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 3) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 09:04:30  W (322703) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 09:04:30  W (322703) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 09:04:30  E (322703) check_tof: Sensor start failed (attempt 4) - check wiring/pull-ups, retrying
+2026-11-10 09:04:30  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 4) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 09:04:30  W (322903) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 09:04:30  W (322903) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 09:04:30  E (322903) check_tof: Sensor start failed (attempt 5) - check wiring/pull-ups, retrying
+2026-11-10 09:04:30  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 5) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 09:04:31  I (323903) check_tof: Loading sensor firmware (takes a few seconds)...
+2026-11-10 09:04:33  I (326323) check_tof: VL53L8CX ready (ULD VL53L8CX_2.0.0), ranging 8x8 @ 15 Hz
+2026-11-10 09:04:33  [server] live: Đang nhận dữ liệu
+2026-11-10 09:06:30  [server] lost: Mất kết nối USB (thiết bị đã ngắt) — đang chờ board cắm lại…
+2026-11-10 09:06:30  [server] noport: Không thấy board — hãy cắm cáp USB
+2026-11-10 09:16:47  [server] waiting: Đã mở /dev/ttyACM0 — chờ dữ liệu từ cảm biến…
+2026-11-10 09:16:49  I (2773) check_tof: VL53L8CX ready (ULD VL53L8CX_2.0.0), ranging 8x8 @ 15 Hz
+2026-11-10 09:16:49  [server] live: Đang nhận dữ liệu
+2026-11-10 09:57:21  W (2434393) check_tof: Too many I2C errors (last status=3) - restarting sensor
+2026-11-10 09:57:21  W (2434393) check_tof: before restart: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 09:57:21  I (2434413) check_tof: Loading sensor firmware (takes a few seconds)...
+2026-11-10 09:57:23  I (2436833) check_tof: VL53L8CX ready (ULD VL53L8CX_2.0.0), ranging 8x8 @ 15 Hz
+2026-11-10 10:03:05  [server] lost: Mất kết nối USB (thiết bị đã ngắt) — đang chờ board cắm lại…
+2026-11-10 10:03:06  [server] noport: Không thấy board — hãy cắm cáp USB
+2026-11-10 10:03:07  [server] waiting: Đã mở /dev/ttyACM0 — chờ dữ liệu từ cảm biến…
+2026-11-10 10:03:07  [server] live: Đang nhận dữ liệu
+2026-11-10 10:03:08  W (2781923) check_tof: Too many I2C errors (last status=3) - restarting sensor
+2026-11-10 10:03:08  W (2781923) check_tof: before restart: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:03:11  [server] stale: Cổng mở nhưng không có frame — board đang khởi động lại cảm biến?
+2026-11-10 10:03:12  E (2785273) i2c.master: I2C transaction timeout detected
+2026-11-10 10:03:12  E (2785293) i2c.master: I2C transaction timeout detected
+2026-11-10 10:03:13  W (2786933) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:03:13  W (2786933) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:03:13  E (2786933) check_tof: Sensor start failed (attempt 1) - check wiring/pull-ups, retrying
+2026-11-10 10:03:14  W (2787133) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:03:14  W (2787133) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:03:14  E (2787133) check_tof: Sensor start failed (attempt 2) - check wiring/pull-ups, retrying
+2026-11-10 10:03:14  W (2787333) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:03:14  W (2787333) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:03:14  E (2787333) check_tof: Sensor start failed (attempt 3) - check wiring/pull-ups, retrying
+2026-11-10 10:03:14  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 3) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:03:14  W (2787533) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:03:14  W (2787533) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:03:14  E (2787533) check_tof: Sensor start failed (attempt 4) - check wiring/pull-ups, retrying
+2026-11-10 10:03:14  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 4) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:03:14  W (2787733) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:03:14  W (2787733) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:03:14  E (2787733) check_tof: Sensor start failed (attempt 5) - check wiring/pull-ups, retrying
+2026-11-10 10:03:14  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 5) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:03:15  I (2788733) check_tof: Loading sensor firmware (takes a few seconds)...
+2026-11-10 10:03:16  W (2789843) check_tof: vl53l8cx_init failed (status=3)
+2026-11-10 10:03:16  E (2789843) check_tof: Sensor start failed (attempt 6) - check wiring/pull-ups, retrying
+2026-11-10 10:03:16  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 6) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:03:17  I (2790843) check_tof: Loading sensor firmware (takes a few seconds)...
+2026-11-10 10:03:20  I (2793263) check_tof: VL53L8CX ready (ULD VL53L8CX_2.0.0), ranging 8x8 @ 15 Hz
+2026-11-10 10:03:20  [server] live: Đang nhận dữ liệu
+2026-11-10 10:03:29  W (2802143) check_tof: Too many I2C errors (last status=131) - restarting sensor
+2026-11-10 10:03:29  W (2802143) check_tof: before restart: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:03:29  W (2802153) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:03:29  W (2802153) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:03:29  E (2802153) check_tof: Sensor start failed (attempt 1) - check wiring/pull-ups, retrying
+2026-11-10 10:03:29  I (2802353) check_tof: Loading sensor firmware (takes a few seconds)...
+2026-11-10 10:03:31  I (2804773) check_tof: VL53L8CX ready (ULD VL53L8CX_2.0.0), ranging 8x8 @ 15 Hz
+2026-11-10 10:04:27  E (2860513) i2c.master: I2C transaction timeout detected
+2026-11-10 10:04:27  E (2860573) i2c.master: clear bus failed.
+2026-11-10 10:04:27  E (2860573) i2c.master: s_i2c_transaction_start(687): reset hardware failed
+2026-11-10 10:18:56  E (3729153) i2c.master: I2C transaction timeout detected
+2026-11-10 10:18:56  E (3729263) i2c.master: I2C transaction timeout detected
+2026-11-10 10:18:56  W (3729273) check_tof: Too many I2C errors (last status=255) - restarting sensor
+2026-11-10 10:18:56  W (3729273) check_tof: before restart: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:18:56  W (3729283) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:18:56  W (3729283) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:18:56  E (3729283) check_tof: Sensor start failed (attempt 1) - check wiring/pull-ups, retrying
+2026-11-10 10:18:56  I (3729483) check_tof: Loading sensor firmware (takes a few seconds)...
+2026-11-10 10:18:58  I (3731903) check_tof: VL53L8CX ready (ULD VL53L8CX_2.0.0), ranging 8x8 @ 15 Hz
+2026-11-10 10:19:12  W (3745253) check_tof: Too many I2C errors (last status=3) - restarting sensor
+2026-11-10 10:19:12  W (3745253) check_tof: before restart: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:19:15  [server] stale: Cổng mở nhưng không có frame — board đang khởi động lại cảm biến?
+2026-11-10 10:19:17  I (3750263) check_tof: Loading sensor firmware (takes a few seconds)...
+2026-11-10 10:19:19  I (3752683) check_tof: VL53L8CX ready (ULD VL53L8CX_2.0.0), ranging 8x8 @ 15 Hz
+2026-11-10 10:19:19  [server] live: Đang nhận dữ liệu
+2026-11-10 10:20:04  W (3797993) check_tof: Too many I2C errors (last status=255) - restarting sensor
+2026-11-10 10:20:04  W (3797993) check_tof: before restart: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:04  W (3798003) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:04  W (3798003) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:04  E (3798003) check_tof: Sensor start failed (attempt 1) - check wiring/pull-ups, retrying
+2026-11-10 10:20:05  W (3798203) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:05  W (3798203) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:05  E (3798203) check_tof: Sensor start failed (attempt 2) - check wiring/pull-ups, retrying
+2026-11-10 10:20:05  W (3798403) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:05  W (3798403) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:05  E (3798403) check_tof: Sensor start failed (attempt 3) - check wiring/pull-ups, retrying
+2026-11-10 10:20:05  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 3) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:05  W (3798603) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:05  W (3798603) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:05  E (3798603) check_tof: Sensor start failed (attempt 4) - check wiring/pull-ups, retrying
+2026-11-10 10:20:05  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 4) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:05  I (3798803) check_tof: Loading sensor firmware (takes a few seconds)...
+2026-11-10 10:20:07  W (3800913) check_tof: vl53l8cx_init failed (status=3)
+2026-11-10 10:20:07  E (3800913) check_tof: Sensor start failed (attempt 5) - check wiring/pull-ups, retrying
+2026-11-10 10:20:07  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 5) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:08  W (3801913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:08  W (3801913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:08  E (3801913) check_tof: Sensor start failed (attempt 6) - check wiring/pull-ups, retrying
+2026-11-10 10:20:08  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 6) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:09  W (3802913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:09  W (3802913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:09  E (3802913) check_tof: Sensor start failed (attempt 7) - check wiring/pull-ups, retrying
+2026-11-10 10:20:09  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 7) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:10  W (3803913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:10  W (3803913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:10  E (3803913) check_tof: Sensor start failed (attempt 8) - check wiring/pull-ups, retrying
+2026-11-10 10:20:10  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 8) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:11  W (3804913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:11  W (3804913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:11  E (3804913) check_tof: Sensor start failed (attempt 9) - check wiring/pull-ups, retrying
+2026-11-10 10:20:11  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 9) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:12  W (3805913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:12  W (3805913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:12  E (3805913) check_tof: Sensor start failed (attempt 10) - check wiring/pull-ups, retrying
+2026-11-10 10:20:12  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 10) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:13  W (3806913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:13  W (3806913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:13  E (3806913) check_tof: Sensor start failed (attempt 11) - check wiring/pull-ups, retrying
+2026-11-10 10:20:13  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 11) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:14  W (3807913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:14  W (3807913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:14  E (3807913) check_tof: Sensor start failed (attempt 12) - check wiring/pull-ups, retrying
+2026-11-10 10:20:14  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 12) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:15  W (3808913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:15  W (3808913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:15  E (3808913) check_tof: Sensor start failed (attempt 13) - check wiring/pull-ups, retrying
+2026-11-10 10:20:15  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 13) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:16  W (3809913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:16  W (3809913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:16  E (3809913) check_tof: Sensor start failed (attempt 14) - check wiring/pull-ups, retrying
+2026-11-10 10:20:16  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 14) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:17  W (3810913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:17  W (3810913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:17  E (3810913) check_tof: Sensor start failed (attempt 15) - check wiring/pull-ups, retrying
+2026-11-10 10:20:17  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 15) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:18  W (3811913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:18  W (3811913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:18  E (3811913) check_tof: Sensor start failed (attempt 16) - check wiring/pull-ups, retrying
+2026-11-10 10:20:18  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 16) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:19  W (3812913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:19  W (3812913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:19  E (3812913) check_tof: Sensor start failed (attempt 17) - check wiring/pull-ups, retrying
+2026-11-10 10:20:19  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 17) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:20  W (3813913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:20  W (3813913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:20  E (3813913) check_tof: Sensor start failed (attempt 18) - check wiring/pull-ups, retrying
+2026-11-10 10:20:20  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 18) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:21  W (3814913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:21  W (3814913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:21  E (3814913) check_tof: Sensor start failed (attempt 19) - check wiring/pull-ups, retrying
+2026-11-10 10:20:21  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 19) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:22  W (3815913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:22  W (3815913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:22  E (3815913) check_tof: Sensor start failed (attempt 20) - check wiring/pull-ups, retrying
+2026-11-10 10:20:22  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 20) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:23  W (3816913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:23  W (3816913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:23  E (3816913) check_tof: Sensor start failed (attempt 21) - check wiring/pull-ups, retrying
+2026-11-10 10:20:23  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 21) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:24  W (3817913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:24  W (3817913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:24  E (3817913) check_tof: Sensor start failed (attempt 22) - check wiring/pull-ups, retrying
+2026-11-10 10:20:24  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 22) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:25  W (3818913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:25  W (3818913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:25  E (3818913) check_tof: Sensor start failed (attempt 23) - check wiring/pull-ups, retrying
+2026-11-10 10:20:25  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 23) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:26  W (3819913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:26  W (3819913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:26  E (3819913) check_tof: Sensor start failed (attempt 24) - check wiring/pull-ups, retrying
+2026-11-10 10:20:26  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 24) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:27  W (3820913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:27  W (3820913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:27  E (3820913) check_tof: Sensor start failed (attempt 25) - check wiring/pull-ups, retrying
+2026-11-10 10:20:27  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 25) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:28  W (3821913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:28  W (3821913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:28  E (3821913) check_tof: Sensor start failed (attempt 26) - check wiring/pull-ups, retrying
+2026-11-10 10:20:28  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 26) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:29  W (3822913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:29  W (3822913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:29  E (3822913) check_tof: Sensor start failed (attempt 27) - check wiring/pull-ups, retrying
+2026-11-10 10:20:29  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 27) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:30  W (3823913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:30  W (3823913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:30  E (3823913) check_tof: Sensor start failed (attempt 28) - check wiring/pull-ups, retrying
+2026-11-10 10:20:30  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 28) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:31  W (3824913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:31  W (3824913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:31  E (3824913) check_tof: Sensor start failed (attempt 29) - check wiring/pull-ups, retrying
+2026-11-10 10:20:31  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 29) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:32  W (3825913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:32  W (3825913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:32  E (3825913) check_tof: Sensor start failed (attempt 30) - check wiring/pull-ups, retrying
+2026-11-10 10:20:32  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 30) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:33  W (3826913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:33  W (3826913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:33  E (3826913) check_tof: Sensor start failed (attempt 31) - check wiring/pull-ups, retrying
+2026-11-10 10:20:33  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 31) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:34  W (3827913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:34  W (3827913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:34  E (3827913) check_tof: Sensor start failed (attempt 32) - check wiring/pull-ups, retrying
+2026-11-10 10:20:34  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 32) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:35  W (3828913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:35  W (3828913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:35  E (3828913) check_tof: Sensor start failed (attempt 33) - check wiring/pull-ups, retrying
+2026-11-10 10:20:35  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 33) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:36  W (3829913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:36  W (3829913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:36  E (3829913) check_tof: Sensor start failed (attempt 34) - check wiring/pull-ups, retrying
+2026-11-10 10:20:36  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 34) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:37  W (3830913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:37  W (3830913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:37  E (3830913) check_tof: Sensor start failed (attempt 35) - check wiring/pull-ups, retrying
+2026-11-10 10:20:37  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 35) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:38  W (3831913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:38  W (3831913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:38  E (3831913) check_tof: Sensor start failed (attempt 36) - check wiring/pull-ups, retrying
+2026-11-10 10:20:38  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 36) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:39  W (3832913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:39  W (3832913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:39  E (3832913) check_tof: Sensor start failed (attempt 37) - check wiring/pull-ups, retrying
+2026-11-10 10:20:39  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 37) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:40  W (3833913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:40  W (3833913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:40  E (3833913) check_tof: Sensor start failed (attempt 38) - check wiring/pull-ups, retrying
+2026-11-10 10:20:40  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 38) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:41  W (3834913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:41  W (3834913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:41  E (3834913) check_tof: Sensor start failed (attempt 39) - check wiring/pull-ups, retrying
+2026-11-10 10:20:41  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 39) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:42  W (3835913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:42  W (3835913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:42  E (3835913) check_tof: Sensor start failed (attempt 40) - check wiring/pull-ups, retrying
+2026-11-10 10:20:42  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 40) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:43  W (3836913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:43  W (3836913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:43  E (3836913) check_tof: Sensor start failed (attempt 41) - check wiring/pull-ups, retrying
+2026-11-10 10:20:43  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 41) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:44  W (3837913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:44  W (3837913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:44  E (3837913) check_tof: Sensor start failed (attempt 42) - check wiring/pull-ups, retrying
+2026-11-10 10:20:44  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 42) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:45  W (3838913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:45  W (3838913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:45  E (3838913) check_tof: Sensor start failed (attempt 43) - check wiring/pull-ups, retrying
+2026-11-10 10:20:45  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 43) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:46  W (3839913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:46  W (3839913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:46  E (3839913) check_tof: Sensor start failed (attempt 44) - check wiring/pull-ups, retrying
+2026-11-10 10:20:46  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 44) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:47  W (3840913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:47  W (3840913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:47  E (3840913) check_tof: Sensor start failed (attempt 45) - check wiring/pull-ups, retrying
+2026-11-10 10:20:47  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 45) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:48  W (3841913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:48  W (3841913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:48  E (3841913) check_tof: Sensor start failed (attempt 46) - check wiring/pull-ups, retrying
+2026-11-10 10:20:48  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 46) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:49  W (3842913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:49  W (3842913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:49  E (3842913) check_tof: Sensor start failed (attempt 47) - check wiring/pull-ups, retrying
+2026-11-10 10:20:49  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 47) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:50  W (3843913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:50  W (3843913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:50  E (3843913) check_tof: Sensor start failed (attempt 48) - check wiring/pull-ups, retrying
+2026-11-10 10:20:50  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 48) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:51  W (3844913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:51  W (3844913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:51  E (3844913) check_tof: Sensor start failed (attempt 49) - check wiring/pull-ups, retrying
+2026-11-10 10:20:51  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 49) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:52  W (3845913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:52  W (3845913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:52  E (3845913) check_tof: Sensor start failed (attempt 50) - check wiring/pull-ups, retrying
+2026-11-10 10:20:52  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 50) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:53  W (3846913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:53  W (3846913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:53  E (3846913) check_tof: Sensor start failed (attempt 51) - check wiring/pull-ups, retrying
+2026-11-10 10:20:53  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 51) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:54  W (3847913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:54  W (3847913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:54  E (3847913) check_tof: Sensor start failed (attempt 52) - check wiring/pull-ups, retrying
+2026-11-10 10:20:54  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 52) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:55  W (3848913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:55  W (3848913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:55  E (3848913) check_tof: Sensor start failed (attempt 53) - check wiring/pull-ups, retrying
+2026-11-10 10:20:55  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 53) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:56  W (3849913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:56  W (3849913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:56  E (3849913) check_tof: Sensor start failed (attempt 54) - check wiring/pull-ups, retrying
+2026-11-10 10:20:56  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 54) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:57  W (3850913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:57  W (3850913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:57  E (3850913) check_tof: Sensor start failed (attempt 55) - check wiring/pull-ups, retrying
+2026-11-10 10:20:57  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 55) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:58  W (3851913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:58  W (3851913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:58  E (3851913) check_tof: Sensor start failed (attempt 56) - check wiring/pull-ups, retrying
+2026-11-10 10:20:58  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 56) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:20:59  W (3852913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:20:59  W (3852913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:20:59  E (3852913) check_tof: Sensor start failed (attempt 57) - check wiring/pull-ups, retrying
+2026-11-10 10:20:59  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 57) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:00  W (3853913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:00  W (3853913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:00  E (3853913) check_tof: Sensor start failed (attempt 58) - check wiring/pull-ups, retrying
+2026-11-10 10:21:00  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 58) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:01  W (3854913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:01  W (3854913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:01  E (3854913) check_tof: Sensor start failed (attempt 59) - check wiring/pull-ups, retrying
+2026-11-10 10:21:01  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 59) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:02  W (3855913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:02  W (3855913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:02  E (3855913) check_tof: Sensor start failed (attempt 60) - check wiring/pull-ups, retrying
+2026-11-10 10:21:02  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 60) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:03  W (3856913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:03  W (3856913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:03  E (3856913) check_tof: Sensor start failed (attempt 61) - check wiring/pull-ups, retrying
+2026-11-10 10:21:03  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 61) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:04  W (3857913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:04  W (3857913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:04  E (3857913) check_tof: Sensor start failed (attempt 62) - check wiring/pull-ups, retrying
+2026-11-10 10:21:04  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 62) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:05  W (3858913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:05  W (3858913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:05  E (3858913) check_tof: Sensor start failed (attempt 63) - check wiring/pull-ups, retrying
+2026-11-10 10:21:05  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 63) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:06  W (3859913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:06  W (3859913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:06  E (3859913) check_tof: Sensor start failed (attempt 64) - check wiring/pull-ups, retrying
+2026-11-10 10:21:06  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 64) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:07  W (3860913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:07  W (3860913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:07  E (3860913) check_tof: Sensor start failed (attempt 65) - check wiring/pull-ups, retrying
+2026-11-10 10:21:07  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 65) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:08  W (3861913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:08  W (3861913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:08  E (3861913) check_tof: Sensor start failed (attempt 66) - check wiring/pull-ups, retrying
+2026-11-10 10:21:08  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 66) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:09  W (3862913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:09  W (3862913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:09  E (3862913) check_tof: Sensor start failed (attempt 67) - check wiring/pull-ups, retrying
+2026-11-10 10:21:09  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 67) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:10  W (3863913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:10  W (3863913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:10  E (3863913) check_tof: Sensor start failed (attempt 68) - check wiring/pull-ups, retrying
+2026-11-10 10:21:10  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 68) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:11  W (3864913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:11  W (3864913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:11  E (3864913) check_tof: Sensor start failed (attempt 69) - check wiring/pull-ups, retrying
+2026-11-10 10:21:11  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 69) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:12  W (3865913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:12  W (3865913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:12  E (3865913) check_tof: Sensor start failed (attempt 70) - check wiring/pull-ups, retrying
+2026-11-10 10:21:12  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 70) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:13  W (3866913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:13  W (3866913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:13  E (3866913) check_tof: Sensor start failed (attempt 71) - check wiring/pull-ups, retrying
+2026-11-10 10:21:13  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 71) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:14  W (3867913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:14  W (3867913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:14  E (3867913) check_tof: Sensor start failed (attempt 72) - check wiring/pull-ups, retrying
+2026-11-10 10:21:14  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 72) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:15  W (3868913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:15  W (3868913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:15  E (3868913) check_tof: Sensor start failed (attempt 73) - check wiring/pull-ups, retrying
+2026-11-10 10:21:15  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 73) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:16  W (3869913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:16  W (3869913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:16  E (3869913) check_tof: Sensor start failed (attempt 74) - check wiring/pull-ups, retrying
+2026-11-10 10:21:16  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 74) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:17  W (3870913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:17  W (3870913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:17  E (3870913) check_tof: Sensor start failed (attempt 75) - check wiring/pull-ups, retrying
+2026-11-10 10:21:17  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 75) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:18  W (3871913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:18  W (3871913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:18  E (3871913) check_tof: Sensor start failed (attempt 76) - check wiring/pull-ups, retrying
+2026-11-10 10:21:18  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 76) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:19  W (3872913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:19  W (3872913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:19  E (3872913) check_tof: Sensor start failed (attempt 77) - check wiring/pull-ups, retrying
+2026-11-10 10:21:19  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 77) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:20  W (3873913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:20  W (3873913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:20  E (3873913) check_tof: Sensor start failed (attempt 78) - check wiring/pull-ups, retrying
+2026-11-10 10:21:20  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 78) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:21  W (3874913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:21  W (3874913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:21  E (3874913) check_tof: Sensor start failed (attempt 79) - check wiring/pull-ups, retrying
+2026-11-10 10:21:21  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 79) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:22  W (3875913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:22  W (3875913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:22  E (3875913) check_tof: Sensor start failed (attempt 80) - check wiring/pull-ups, retrying
+2026-11-10 10:21:22  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 80) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:23  W (3876913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:23  W (3876913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:23  E (3876913) check_tof: Sensor start failed (attempt 81) - check wiring/pull-ups, retrying
+2026-11-10 10:21:23  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 81) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:24  W (3877913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:24  W (3877913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:24  E (3877913) check_tof: Sensor start failed (attempt 82) - check wiring/pull-ups, retrying
+2026-11-10 10:21:24  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 82) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:25  W (3878913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:25  W (3878913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:25  E (3878913) check_tof: Sensor start failed (attempt 83) - check wiring/pull-ups, retrying
+2026-11-10 10:21:25  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 83) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:26  W (3879913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:26  W (3879913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:26  E (3879913) check_tof: Sensor start failed (attempt 84) - check wiring/pull-ups, retrying
+2026-11-10 10:21:26  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 84) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:27  W (3880913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:27  W (3880913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:27  E (3880913) check_tof: Sensor start failed (attempt 85) - check wiring/pull-ups, retrying
+2026-11-10 10:21:27  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 85) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:28  W (3881913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:28  W (3881913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:28  E (3881913) check_tof: Sensor start failed (attempt 86) - check wiring/pull-ups, retrying
+2026-11-10 10:21:28  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 86) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:29  W (3882913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:29  W (3882913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:29  E (3882913) check_tof: Sensor start failed (attempt 87) - check wiring/pull-ups, retrying
+2026-11-10 10:21:29  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 87) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:30  W (3883913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:30  W (3883913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:30  E (3883913) check_tof: Sensor start failed (attempt 88) - check wiring/pull-ups, retrying
+2026-11-10 10:21:30  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 88) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:31  W (3884913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:31  W (3884913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:31  E (3884913) check_tof: Sensor start failed (attempt 89) - check wiring/pull-ups, retrying
+2026-11-10 10:21:31  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 89) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:32  W (3885913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:32  W (3885913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:32  E (3885913) check_tof: Sensor start failed (attempt 90) - check wiring/pull-ups, retrying
+2026-11-10 10:21:32  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 90) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:33  W (3886913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:33  W (3886913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:33  E (3886913) check_tof: Sensor start failed (attempt 91) - check wiring/pull-ups, retrying
+2026-11-10 10:21:33  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 91) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:34  W (3887913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:34  W (3887913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:34  E (3887913) check_tof: Sensor start failed (attempt 92) - check wiring/pull-ups, retrying
+2026-11-10 10:21:34  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 92) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:35  W (3888913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:35  W (3888913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:35  E (3888913) check_tof: Sensor start failed (attempt 93) - check wiring/pull-ups, retrying
+2026-11-10 10:21:35  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 93) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:36  W (3889913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:36  W (3889913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:36  E (3889913) check_tof: Sensor start failed (attempt 94) - check wiring/pull-ups, retrying
+2026-11-10 10:21:36  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 94) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:37  W (3890913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:37  W (3890913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:37  E (3890913) check_tof: Sensor start failed (attempt 95) - check wiring/pull-ups, retrying
+2026-11-10 10:21:37  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 95) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:38  W (3891913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:38  W (3891913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:38  E (3891913) check_tof: Sensor start failed (attempt 96) - check wiring/pull-ups, retrying
+2026-11-10 10:21:38  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 96) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:39  W (3892913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:39  W (3892913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:39  E (3892913) check_tof: Sensor start failed (attempt 97) - check wiring/pull-ups, retrying
+2026-11-10 10:21:39  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 97) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:40  W (3893913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:40  W (3893913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:40  E (3893913) check_tof: Sensor start failed (attempt 98) - check wiring/pull-ups, retrying
+2026-11-10 10:21:40  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 98) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:41  W (3894913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:41  W (3894913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:41  E (3894913) check_tof: Sensor start failed (attempt 99) - check wiring/pull-ups, retrying
+2026-11-10 10:21:41  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 99) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:42  W (3895913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:42  W (3895913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:42  E (3895913) check_tof: Sensor start failed (attempt 100) - check wiring/pull-ups, retrying
+2026-11-10 10:21:42  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 100) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:43  W (3896913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:43  W (3896913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:43  E (3896913) check_tof: Sensor start failed (attempt 101) - check wiring/pull-ups, retrying
+2026-11-10 10:21:43  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 101) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:44  W (3897913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:44  W (3897913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:44  E (3897913) check_tof: Sensor start failed (attempt 102) - check wiring/pull-ups, retrying
+2026-11-10 10:21:44  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 102) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:45  W (3898913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:45  W (3898913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:45  E (3898913) check_tof: Sensor start failed (attempt 103) - check wiring/pull-ups, retrying
+2026-11-10 10:21:45  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 103) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:46  W (3899913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:46  W (3899913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:46  E (3899913) check_tof: Sensor start failed (attempt 104) - check wiring/pull-ups, retrying
+2026-11-10 10:21:46  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 104) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:47  W (3900913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:47  W (3900913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:47  E (3900913) check_tof: Sensor start failed (attempt 105) - check wiring/pull-ups, retrying
+2026-11-10 10:21:47  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 105) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:48  W (3901913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:48  W (3901913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:48  E (3901913) check_tof: Sensor start failed (attempt 106) - check wiring/pull-ups, retrying
+2026-11-10 10:21:48  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 106) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:49  W (3902913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:49  W (3902913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:49  E (3902913) check_tof: Sensor start failed (attempt 107) - check wiring/pull-ups, retrying
+2026-11-10 10:21:49  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 107) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:50  W (3903913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:50  W (3903913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:50  E (3903913) check_tof: Sensor start failed (attempt 108) - check wiring/pull-ups, retrying
+2026-11-10 10:21:50  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 108) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:51  W (3904913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:51  W (3904913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:51  E (3904913) check_tof: Sensor start failed (attempt 109) - check wiring/pull-ups, retrying
+2026-11-10 10:21:51  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 109) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:52  W (3905913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:52  W (3905913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:52  E (3905913) check_tof: Sensor start failed (attempt 110) - check wiring/pull-ups, retrying
+2026-11-10 10:21:52  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 110) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:53  W (3906913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:53  W (3906913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:53  E (3906913) check_tof: Sensor start failed (attempt 111) - check wiring/pull-ups, retrying
+2026-11-10 10:21:53  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 111) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:54  W (3907913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:54  W (3907913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:54  E (3907913) check_tof: Sensor start failed (attempt 112) - check wiring/pull-ups, retrying
+2026-11-10 10:21:54  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 112) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:55  W (3908913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:55  W (3908913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:55  E (3908913) check_tof: Sensor start failed (attempt 113) - check wiring/pull-ups, retrying
+2026-11-10 10:21:55  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 113) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:56  W (3909913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:56  W (3909913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:56  E (3909913) check_tof: Sensor start failed (attempt 114) - check wiring/pull-ups, retrying
+2026-11-10 10:21:56  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 114) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:57  W (3910913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:57  W (3910913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:57  E (3910913) check_tof: Sensor start failed (attempt 115) - check wiring/pull-ups, retrying
+2026-11-10 10:21:57  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 115) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:58  W (3911913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:58  W (3911913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:58  E (3911913) check_tof: Sensor start failed (attempt 116) - check wiring/pull-ups, retrying
+2026-11-10 10:21:58  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 116) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:21:59  W (3912913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:21:59  W (3912913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:21:59  E (3912913) check_tof: Sensor start failed (attempt 117) - check wiring/pull-ups, retrying
+2026-11-10 10:21:59  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 117) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:00  W (3913913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:00  W (3913913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:00  E (3913913) check_tof: Sensor start failed (attempt 118) - check wiring/pull-ups, retrying
+2026-11-10 10:22:00  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 118) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:01  W (3914913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:01  W (3914913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:01  E (3914913) check_tof: Sensor start failed (attempt 119) - check wiring/pull-ups, retrying
+2026-11-10 10:22:01  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 119) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:02  W (3915913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:02  W (3915913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:02  E (3915913) check_tof: Sensor start failed (attempt 120) - check wiring/pull-ups, retrying
+2026-11-10 10:22:02  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 120) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:03  W (3916913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:03  W (3916913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:03  E (3916913) check_tof: Sensor start failed (attempt 121) - check wiring/pull-ups, retrying
+2026-11-10 10:22:03  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 121) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:04  W (3917913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:04  W (3917913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:04  E (3917913) check_tof: Sensor start failed (attempt 122) - check wiring/pull-ups, retrying
+2026-11-10 10:22:04  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 122) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:05  W (3918913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:05  W (3918913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:05  E (3918913) check_tof: Sensor start failed (attempt 123) - check wiring/pull-ups, retrying
+2026-11-10 10:22:05  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 123) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:06  W (3919913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:06  W (3919913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:06  E (3919913) check_tof: Sensor start failed (attempt 124) - check wiring/pull-ups, retrying
+2026-11-10 10:22:06  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 124) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:07  W (3920913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:07  W (3920913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:07  E (3920913) check_tof: Sensor start failed (attempt 125) - check wiring/pull-ups, retrying
+2026-11-10 10:22:07  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 125) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:08  W (3921913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:08  W (3921913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:08  E (3921913) check_tof: Sensor start failed (attempt 126) - check wiring/pull-ups, retrying
+2026-11-10 10:22:08  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 126) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:09  W (3922913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:09  W (3922913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:09  E (3922913) check_tof: Sensor start failed (attempt 127) - check wiring/pull-ups, retrying
+2026-11-10 10:22:09  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 127) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:10  W (3923913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:10  W (3923913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:10  E (3923913) check_tof: Sensor start failed (attempt 128) - check wiring/pull-ups, retrying
+2026-11-10 10:22:10  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 128) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:11  W (3924913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:11  W (3924913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:11  E (3924913) check_tof: Sensor start failed (attempt 129) - check wiring/pull-ups, retrying
+2026-11-10 10:22:11  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 129) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:12  W (3925913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:12  W (3925913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:12  E (3925913) check_tof: Sensor start failed (attempt 130) - check wiring/pull-ups, retrying
+2026-11-10 10:22:12  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 130) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:13  W (3926913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:13  W (3926913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:13  E (3926913) check_tof: Sensor start failed (attempt 131) - check wiring/pull-ups, retrying
+2026-11-10 10:22:13  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 131) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:14  W (3927913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:14  W (3927913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:14  E (3927913) check_tof: Sensor start failed (attempt 132) - check wiring/pull-ups, retrying
+2026-11-10 10:22:14  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 132) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:15  W (3928913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:15  W (3928913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:15  E (3928913) check_tof: Sensor start failed (attempt 133) - check wiring/pull-ups, retrying
+2026-11-10 10:22:15  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 133) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:16  W (3929913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:16  W (3929913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:16  E (3929913) check_tof: Sensor start failed (attempt 134) - check wiring/pull-ups, retrying
+2026-11-10 10:22:16  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 134) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:17  W (3930913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:17  W (3930913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:17  E (3930913) check_tof: Sensor start failed (attempt 135) - check wiring/pull-ups, retrying
+2026-11-10 10:22:17  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 135) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:18  W (3931913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:18  W (3931913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:18  E (3931913) check_tof: Sensor start failed (attempt 136) - check wiring/pull-ups, retrying
+2026-11-10 10:22:18  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 136) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:19  W (3932913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:19  W (3932913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:19  E (3932913) check_tof: Sensor start failed (attempt 137) - check wiring/pull-ups, retrying
+2026-11-10 10:22:19  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 137) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:20  W (3933913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:20  W (3933913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:20  E (3933913) check_tof: Sensor start failed (attempt 138) - check wiring/pull-ups, retrying
+2026-11-10 10:22:20  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 138) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:21  W (3934913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:21  W (3934913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:21  E (3934913) check_tof: Sensor start failed (attempt 139) - check wiring/pull-ups, retrying
+2026-11-10 10:22:21  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 139) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:22  W (3935913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:22  W (3935913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:22  E (3935913) check_tof: Sensor start failed (attempt 140) - check wiring/pull-ups, retrying
+2026-11-10 10:22:22  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 140) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:23  W (3936913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:23  W (3936913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:23  E (3936913) check_tof: Sensor start failed (attempt 141) - check wiring/pull-ups, retrying
+2026-11-10 10:22:23  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 141) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:24  W (3937913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:24  W (3937913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:24  E (3937913) check_tof: Sensor start failed (attempt 142) - check wiring/pull-ups, retrying
+2026-11-10 10:22:24  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 142) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:25  W (3938913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:25  W (3938913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:25  E (3938913) check_tof: Sensor start failed (attempt 143) - check wiring/pull-ups, retrying
+2026-11-10 10:22:25  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 143) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:26  W (3939913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:26  W (3939913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:26  E (3939913) check_tof: Sensor start failed (attempt 144) - check wiring/pull-ups, retrying
+2026-11-10 10:22:26  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 144) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:27  W (3940913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:27  W (3940913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:27  E (3940913) check_tof: Sensor start failed (attempt 145) - check wiring/pull-ups, retrying
+2026-11-10 10:22:27  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 145) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:28  W (3941913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:28  W (3941913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:28  E (3941913) check_tof: Sensor start failed (attempt 146) - check wiring/pull-ups, retrying
+2026-11-10 10:22:28  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 146) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:29  W (3942913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:29  W (3942913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:29  E (3942913) check_tof: Sensor start failed (attempt 147) - check wiring/pull-ups, retrying
+2026-11-10 10:22:29  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 147) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:30  W (3943913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:30  W (3943913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:30  E (3943913) check_tof: Sensor start failed (attempt 148) - check wiring/pull-ups, retrying
+2026-11-10 10:22:30  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 148) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:31  W (3944913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:31  W (3944913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:31  E (3944913) check_tof: Sensor start failed (attempt 149) - check wiring/pull-ups, retrying
+2026-11-10 10:22:31  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 149) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:32  W (3945913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:32  W (3945913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:32  E (3945913) check_tof: Sensor start failed (attempt 150) - check wiring/pull-ups, retrying
+2026-11-10 10:22:32  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 150) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:33  W (3946913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:33  W (3946913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:33  E (3946913) check_tof: Sensor start failed (attempt 151) - check wiring/pull-ups, retrying
+2026-11-10 10:22:33  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 151) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:34  W (3947913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:34  W (3947913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:34  E (3947913) check_tof: Sensor start failed (attempt 152) - check wiring/pull-ups, retrying
+2026-11-10 10:22:34  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 152) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:35  W (3948913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:35  W (3948913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:35  E (3948913) check_tof: Sensor start failed (attempt 153) - check wiring/pull-ups, retrying
+2026-11-10 10:22:35  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 153) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:36  W (3949913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:36  W (3949913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:36  E (3949913) check_tof: Sensor start failed (attempt 154) - check wiring/pull-ups, retrying
+2026-11-10 10:22:36  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 154) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:37  W (3950913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:37  W (3950913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:37  E (3950913) check_tof: Sensor start failed (attempt 155) - check wiring/pull-ups, retrying
+2026-11-10 10:22:37  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 155) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:38  W (3951913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:38  W (3951913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:38  E (3951913) check_tof: Sensor start failed (attempt 156) - check wiring/pull-ups, retrying
+2026-11-10 10:22:38  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 156) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:39  W (3952913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:39  W (3952913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:39  E (3952913) check_tof: Sensor start failed (attempt 157) - check wiring/pull-ups, retrying
+2026-11-10 10:22:39  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 157) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:40  W (3953913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:40  W (3953913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:40  E (3953913) check_tof: Sensor start failed (attempt 158) - check wiring/pull-ups, retrying
+2026-11-10 10:22:40  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 158) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:41  W (3954913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:41  W (3954913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:41  E (3954913) check_tof: Sensor start failed (attempt 159) - check wiring/pull-ups, retrying
+2026-11-10 10:22:41  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 159) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:42  W (3955913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:42  W (3955913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:42  E (3955913) check_tof: Sensor start failed (attempt 160) - check wiring/pull-ups, retrying
+2026-11-10 10:22:42  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 160) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:43  W (3956913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:43  W (3956913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:43  E (3956913) check_tof: Sensor start failed (attempt 161) - check wiring/pull-ups, retrying
+2026-11-10 10:22:43  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 161) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:44  W (3957913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:44  W (3957913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:44  E (3957913) check_tof: Sensor start failed (attempt 162) - check wiring/pull-ups, retrying
+2026-11-10 10:22:44  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 162) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:45  W (3958913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:45  W (3958913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:45  E (3958913) check_tof: Sensor start failed (attempt 163) - check wiring/pull-ups, retrying
+2026-11-10 10:22:45  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 163) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:46  W (3959913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:46  W (3959913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:46  E (3959913) check_tof: Sensor start failed (attempt 164) - check wiring/pull-ups, retrying
+2026-11-10 10:22:46  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 164) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:47  W (3960913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:47  W (3960913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:47  E (3960913) check_tof: Sensor start failed (attempt 165) - check wiring/pull-ups, retrying
+2026-11-10 10:22:47  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 165) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:48  W (3961913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:48  W (3961913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:48  E (3961913) check_tof: Sensor start failed (attempt 166) - check wiring/pull-ups, retrying
+2026-11-10 10:22:48  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 166) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:49  W (3962913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:49  W (3962913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:49  E (3962913) check_tof: Sensor start failed (attempt 167) - check wiring/pull-ups, retrying
+2026-11-10 10:22:49  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 167) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:50  W (3963913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:50  W (3963913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:50  E (3963913) check_tof: Sensor start failed (attempt 168) - check wiring/pull-ups, retrying
+2026-11-10 10:22:50  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 168) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:51  W (3964913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:51  W (3964913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:51  E (3964913) check_tof: Sensor start failed (attempt 169) - check wiring/pull-ups, retrying
+2026-11-10 10:22:51  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 169) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:52  W (3965913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:52  W (3965913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:52  E (3965913) check_tof: Sensor start failed (attempt 170) - check wiring/pull-ups, retrying
+2026-11-10 10:22:52  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 170) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:53  W (3966913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:53  W (3966913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:53  E (3966913) check_tof: Sensor start failed (attempt 171) - check wiring/pull-ups, retrying
+2026-11-10 10:22:53  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 171) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:54  W (3967913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:54  W (3967913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:54  E (3967913) check_tof: Sensor start failed (attempt 172) - check wiring/pull-ups, retrying
+2026-11-10 10:22:54  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 172) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:55  W (3968913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:55  W (3968913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:55  E (3968913) check_tof: Sensor start failed (attempt 173) - check wiring/pull-ups, retrying
+2026-11-10 10:22:55  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 173) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:56  W (3969913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:56  W (3969913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:56  E (3969913) check_tof: Sensor start failed (attempt 174) - check wiring/pull-ups, retrying
+2026-11-10 10:22:56  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 174) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:57  W (3970913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:57  W (3970913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:57  E (3970913) check_tof: Sensor start failed (attempt 175) - check wiring/pull-ups, retrying
+2026-11-10 10:22:57  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 175) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:58  W (3971913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:58  W (3971913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:58  E (3971913) check_tof: Sensor start failed (attempt 176) - check wiring/pull-ups, retrying
+2026-11-10 10:22:58  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 176) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:22:59  W (3972913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:22:59  W (3972913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:22:59  E (3972913) check_tof: Sensor start failed (attempt 177) - check wiring/pull-ups, retrying
+2026-11-10 10:22:59  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 177) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:00  W (3973913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:00  W (3973913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:00  E (3973913) check_tof: Sensor start failed (attempt 178) - check wiring/pull-ups, retrying
+2026-11-10 10:23:00  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 178) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:01  W (3974913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:01  W (3974913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:01  E (3974913) check_tof: Sensor start failed (attempt 179) - check wiring/pull-ups, retrying
+2026-11-10 10:23:01  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 179) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:02  W (3975913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:02  W (3975913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:02  E (3975913) check_tof: Sensor start failed (attempt 180) - check wiring/pull-ups, retrying
+2026-11-10 10:23:02  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 180) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:03  W (3976913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:03  W (3976913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:03  E (3976913) check_tof: Sensor start failed (attempt 181) - check wiring/pull-ups, retrying
+2026-11-10 10:23:03  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 181) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:04  W (3977913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:04  W (3977913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:04  E (3977913) check_tof: Sensor start failed (attempt 182) - check wiring/pull-ups, retrying
+2026-11-10 10:23:04  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 182) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:05  W (3978913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:05  W (3978913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:05  E (3978913) check_tof: Sensor start failed (attempt 183) - check wiring/pull-ups, retrying
+2026-11-10 10:23:05  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 183) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:06  W (3979913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:06  W (3979913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:06  E (3979913) check_tof: Sensor start failed (attempt 184) - check wiring/pull-ups, retrying
+2026-11-10 10:23:06  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 184) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:07  W (3980913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:07  W (3980913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:07  E (3980913) check_tof: Sensor start failed (attempt 185) - check wiring/pull-ups, retrying
+2026-11-10 10:23:07  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 185) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:08  W (3981913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:08  W (3981913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:08  E (3981913) check_tof: Sensor start failed (attempt 186) - check wiring/pull-ups, retrying
+2026-11-10 10:23:08  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 186) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:09  W (3982913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:09  W (3982913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:09  E (3982913) check_tof: Sensor start failed (attempt 187) - check wiring/pull-ups, retrying
+2026-11-10 10:23:09  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 187) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:10  W (3983913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:10  W (3983913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:10  E (3983913) check_tof: Sensor start failed (attempt 188) - check wiring/pull-ups, retrying
+2026-11-10 10:23:10  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 188) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:11  W (3984913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:11  W (3984913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:11  E (3984913) check_tof: Sensor start failed (attempt 189) - check wiring/pull-ups, retrying
+2026-11-10 10:23:11  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 189) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:12  W (3985913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:12  W (3985913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:12  E (3985913) check_tof: Sensor start failed (attempt 190) - check wiring/pull-ups, retrying
+2026-11-10 10:23:12  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 190) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:13  W (3986913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:13  W (3986913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:13  E (3986913) check_tof: Sensor start failed (attempt 191) - check wiring/pull-ups, retrying
+2026-11-10 10:23:13  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 191) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:14  W (3987913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:14  W (3987913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:14  E (3987913) check_tof: Sensor start failed (attempt 192) - check wiring/pull-ups, retrying
+2026-11-10 10:23:14  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 192) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:15  W (3988913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:15  W (3988913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:15  E (3988913) check_tof: Sensor start failed (attempt 193) - check wiring/pull-ups, retrying
+2026-11-10 10:23:15  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 193) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:16  W (3989913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:16  W (3989913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:16  E (3989913) check_tof: Sensor start failed (attempt 194) - check wiring/pull-ups, retrying
+2026-11-10 10:23:16  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 194) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:17  W (3990913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:17  W (3990913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:17  E (3990913) check_tof: Sensor start failed (attempt 195) - check wiring/pull-ups, retrying
+2026-11-10 10:23:17  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 195) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:18  W (3991913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:18  W (3991913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:18  E (3991913) check_tof: Sensor start failed (attempt 196) - check wiring/pull-ups, retrying
+2026-11-10 10:23:18  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 196) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:19  W (3992913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:19  W (3992913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:19  E (3992913) check_tof: Sensor start failed (attempt 197) - check wiring/pull-ups, retrying
+2026-11-10 10:23:19  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 197) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:20  W (3993913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:20  W (3993913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:20  E (3993913) check_tof: Sensor start failed (attempt 198) - check wiring/pull-ups, retrying
+2026-11-10 10:23:20  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 198) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:21  W (3994913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:21  W (3994913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:21  E (3994913) check_tof: Sensor start failed (attempt 199) - check wiring/pull-ups, retrying
+2026-11-10 10:23:21  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 199) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:22  W (3995913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:22  W (3995913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:22  E (3995913) check_tof: Sensor start failed (attempt 200) - check wiring/pull-ups, retrying
+2026-11-10 10:23:22  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 200) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:23  W (3996913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:23  W (3996913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:23  E (3996913) check_tof: Sensor start failed (attempt 201) - check wiring/pull-ups, retrying
+2026-11-10 10:23:23  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 201) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:24  W (3997913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:24  W (3997913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:24  E (3997913) check_tof: Sensor start failed (attempt 202) - check wiring/pull-ups, retrying
+2026-11-10 10:23:24  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 202) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:25  W (3998913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:25  W (3998913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:25  E (3998913) check_tof: Sensor start failed (attempt 203) - check wiring/pull-ups, retrying
+2026-11-10 10:23:25  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 203) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:26  W (3999913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:26  W (3999913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:26  E (3999913) check_tof: Sensor start failed (attempt 204) - check wiring/pull-ups, retrying
+2026-11-10 10:23:26  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 204) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:27  W (4000913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:27  W (4000913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:27  E (4000913) check_tof: Sensor start failed (attempt 205) - check wiring/pull-ups, retrying
+2026-11-10 10:23:27  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 205) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:28  W (4001913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:28  W (4001913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:28  E (4001913) check_tof: Sensor start failed (attempt 206) - check wiring/pull-ups, retrying
+2026-11-10 10:23:28  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 206) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:29  W (4002913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:29  W (4002913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:29  E (4002913) check_tof: Sensor start failed (attempt 207) - check wiring/pull-ups, retrying
+2026-11-10 10:23:29  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 207) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:30  W (4003913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:30  W (4003913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:30  E (4003913) check_tof: Sensor start failed (attempt 208) - check wiring/pull-ups, retrying
+2026-11-10 10:23:30  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 208) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:31  W (4004913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:31  W (4004913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:31  E (4004913) check_tof: Sensor start failed (attempt 209) - check wiring/pull-ups, retrying
+2026-11-10 10:23:31  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 209) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:32  W (4005913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:32  W (4005913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:32  E (4005913) check_tof: Sensor start failed (attempt 210) - check wiring/pull-ups, retrying
+2026-11-10 10:23:32  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 210) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:33  W (4006913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:33  W (4006913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:33  E (4006913) check_tof: Sensor start failed (attempt 211) - check wiring/pull-ups, retrying
+2026-11-10 10:23:33  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 211) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:34  W (4007913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:34  W (4007913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:34  E (4007913) check_tof: Sensor start failed (attempt 212) - check wiring/pull-ups, retrying
+2026-11-10 10:23:34  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 212) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:35  W (4008913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:35  W (4008913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:35  E (4008913) check_tof: Sensor start failed (attempt 213) - check wiring/pull-ups, retrying
+2026-11-10 10:23:35  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 213) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:36  W (4009913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:36  W (4009913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:36  E (4009913) check_tof: Sensor start failed (attempt 214) - check wiring/pull-ups, retrying
+2026-11-10 10:23:36  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 214) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:37  W (4010913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:37  W (4010913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:37  E (4010913) check_tof: Sensor start failed (attempt 215) - check wiring/pull-ups, retrying
+2026-11-10 10:23:37  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 215) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:38  W (4011913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:38  W (4011913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:38  E (4011913) check_tof: Sensor start failed (attempt 216) - check wiring/pull-ups, retrying
+2026-11-10 10:23:38  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 216) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:39  W (4012913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:39  W (4012913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:39  E (4012913) check_tof: Sensor start failed (attempt 217) - check wiring/pull-ups, retrying
+2026-11-10 10:23:39  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 217) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:40  W (4013913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:40  W (4013913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:40  E (4013913) check_tof: Sensor start failed (attempt 218) - check wiring/pull-ups, retrying
+2026-11-10 10:23:40  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 218) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:41  W (4014913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:41  W (4014913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:41  E (4014913) check_tof: Sensor start failed (attempt 219) - check wiring/pull-ups, retrying
+2026-11-10 10:23:41  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 219) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:42  W (4015913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:42  W (4015913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:42  E (4015913) check_tof: Sensor start failed (attempt 220) - check wiring/pull-ups, retrying
+2026-11-10 10:23:42  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 220) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:43  W (4016913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:43  W (4016913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:43  E (4016913) check_tof: Sensor start failed (attempt 221) - check wiring/pull-ups, retrying
+2026-11-10 10:23:43  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 221) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:44  W (4017913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:44  W (4017913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:44  E (4017913) check_tof: Sensor start failed (attempt 222) - check wiring/pull-ups, retrying
+2026-11-10 10:23:44  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 222) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:45  W (4018913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:45  W (4018913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:45  E (4018913) check_tof: Sensor start failed (attempt 223) - check wiring/pull-ups, retrying
+2026-11-10 10:23:45  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 223) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:46  W (4019913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:46  W (4019913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:46  E (4019913) check_tof: Sensor start failed (attempt 224) - check wiring/pull-ups, retrying
+2026-11-10 10:23:46  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 224) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:47  W (4020913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:47  W (4020913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:47  E (4020913) check_tof: Sensor start failed (attempt 225) - check wiring/pull-ups, retrying
+2026-11-10 10:23:47  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 225) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:48  W (4021913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:48  W (4021913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:48  E (4021913) check_tof: Sensor start failed (attempt 226) - check wiring/pull-ups, retrying
+2026-11-10 10:23:48  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 226) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:49  W (4022913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:49  W (4022913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:49  E (4022913) check_tof: Sensor start failed (attempt 227) - check wiring/pull-ups, retrying
+2026-11-10 10:23:49  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 227) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:50  W (4023913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:50  W (4023913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:50  E (4023913) check_tof: Sensor start failed (attempt 228) - check wiring/pull-ups, retrying
+2026-11-10 10:23:50  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 228) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:51  W (4024913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:51  W (4024913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:51  E (4024913) check_tof: Sensor start failed (attempt 229) - check wiring/pull-ups, retrying
+2026-11-10 10:23:51  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 229) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:52  W (4025913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:52  W (4025913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:52  E (4025913) check_tof: Sensor start failed (attempt 230) - check wiring/pull-ups, retrying
+2026-11-10 10:23:52  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 230) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:53  W (4026913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:53  W (4026913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:53  E (4026913) check_tof: Sensor start failed (attempt 231) - check wiring/pull-ups, retrying
+2026-11-10 10:23:53  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 231) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:54  W (4027913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:54  W (4027913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:54  E (4027913) check_tof: Sensor start failed (attempt 232) - check wiring/pull-ups, retrying
+2026-11-10 10:23:54  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 232) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:55  W (4028913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:55  W (4028913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:55  E (4028913) check_tof: Sensor start failed (attempt 233) - check wiring/pull-ups, retrying
+2026-11-10 10:23:55  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 233) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:56  W (4029913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:56  W (4029913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:56  E (4029913) check_tof: Sensor start failed (attempt 234) - check wiring/pull-ups, retrying
+2026-11-10 10:23:56  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 234) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:57  W (4030913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:57  W (4030913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:57  E (4030913) check_tof: Sensor start failed (attempt 235) - check wiring/pull-ups, retrying
+2026-11-10 10:23:57  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 235) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:58  W (4031913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:58  W (4031913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:58  E (4031913) check_tof: Sensor start failed (attempt 236) - check wiring/pull-ups, retrying
+2026-11-10 10:23:58  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 236) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:23:59  W (4032913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:23:59  W (4032913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:23:59  E (4032913) check_tof: Sensor start failed (attempt 237) - check wiring/pull-ups, retrying
+2026-11-10 10:23:59  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 237) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:00  W (4033913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:00  W (4033913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:00  E (4033913) check_tof: Sensor start failed (attempt 238) - check wiring/pull-ups, retrying
+2026-11-10 10:24:00  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 238) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:01  W (4034913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:01  W (4034913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:01  E (4034913) check_tof: Sensor start failed (attempt 239) - check wiring/pull-ups, retrying
+2026-11-10 10:24:01  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 239) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:02  W (4035913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:02  W (4035913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:02  E (4035913) check_tof: Sensor start failed (attempt 240) - check wiring/pull-ups, retrying
+2026-11-10 10:24:02  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 240) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:03  W (4036913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:03  W (4036913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:03  E (4036913) check_tof: Sensor start failed (attempt 241) - check wiring/pull-ups, retrying
+2026-11-10 10:24:03  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 241) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:04  W (4037913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:04  W (4037913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:04  E (4037913) check_tof: Sensor start failed (attempt 242) - check wiring/pull-ups, retrying
+2026-11-10 10:24:04  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 242) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:05  W (4038913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:05  W (4038913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:05  E (4038913) check_tof: Sensor start failed (attempt 243) - check wiring/pull-ups, retrying
+2026-11-10 10:24:05  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 243) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:06  W (4039913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:06  W (4039913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:06  E (4039913) check_tof: Sensor start failed (attempt 244) - check wiring/pull-ups, retrying
+2026-11-10 10:24:06  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 244) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:07  W (4040913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:07  W (4040913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:07  E (4040913) check_tof: Sensor start failed (attempt 245) - check wiring/pull-ups, retrying
+2026-11-10 10:24:07  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 245) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:08  W (4041913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:08  W (4041913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:08  E (4041913) check_tof: Sensor start failed (attempt 246) - check wiring/pull-ups, retrying
+2026-11-10 10:24:08  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 246) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:09  W (4042913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:09  W (4042913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:09  E (4042913) check_tof: Sensor start failed (attempt 247) - check wiring/pull-ups, retrying
+2026-11-10 10:24:09  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 247) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:10  W (4043913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:10  W (4043913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:10  E (4043913) check_tof: Sensor start failed (attempt 248) - check wiring/pull-ups, retrying
+2026-11-10 10:24:10  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 248) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:11  W (4044913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:11  W (4044913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:11  E (4044913) check_tof: Sensor start failed (attempt 249) - check wiring/pull-ups, retrying
+2026-11-10 10:24:11  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 249) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:12  W (4045913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:12  W (4045913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:12  E (4045913) check_tof: Sensor start failed (attempt 250) - check wiring/pull-ups, retrying
+2026-11-10 10:24:12  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 250) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:13  W (4046913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:13  W (4046913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:13  E (4046913) check_tof: Sensor start failed (attempt 251) - check wiring/pull-ups, retrying
+2026-11-10 10:24:13  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 251) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:14  W (4047913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:14  W (4047913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:14  E (4047913) check_tof: Sensor start failed (attempt 252) - check wiring/pull-ups, retrying
+2026-11-10 10:24:14  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 252) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:15  W (4048913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:15  W (4048913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:15  E (4048913) check_tof: Sensor start failed (attempt 253) - check wiring/pull-ups, retrying
+2026-11-10 10:24:15  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 253) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:16  W (4049913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:16  W (4049913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:16  E (4049913) check_tof: Sensor start failed (attempt 254) - check wiring/pull-ups, retrying
+2026-11-10 10:24:16  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 254) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:17  W (4050913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:17  W (4050913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:17  E (4050913) check_tof: Sensor start failed (attempt 255) - check wiring/pull-ups, retrying
+2026-11-10 10:24:17  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 255) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:18  W (4051913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:18  W (4051913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:18  E (4051913) check_tof: Sensor start failed (attempt 256) - check wiring/pull-ups, retrying
+2026-11-10 10:24:18  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 256) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:19  W (4052913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:19  W (4052913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:19  E (4052913) check_tof: Sensor start failed (attempt 257) - check wiring/pull-ups, retrying
+2026-11-10 10:24:19  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 257) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:20  W (4053913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:20  W (4053913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:20  E (4053913) check_tof: Sensor start failed (attempt 258) - check wiring/pull-ups, retrying
+2026-11-10 10:24:20  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 258) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:21  W (4054913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:21  W (4054913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:21  E (4054913) check_tof: Sensor start failed (attempt 259) - check wiring/pull-ups, retrying
+2026-11-10 10:24:21  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 259) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:22  W (4055913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:22  W (4055913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:22  E (4055913) check_tof: Sensor start failed (attempt 260) - check wiring/pull-ups, retrying
+2026-11-10 10:24:22  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 260) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:23  W (4056913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:23  W (4056913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:23  E (4056913) check_tof: Sensor start failed (attempt 261) - check wiring/pull-ups, retrying
+2026-11-10 10:24:23  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 261) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:24  W (4057913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:24  W (4057913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:24  E (4057913) check_tof: Sensor start failed (attempt 262) - check wiring/pull-ups, retrying
+2026-11-10 10:24:24  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 262) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:25  W (4058913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:25  W (4058913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:25  E (4058913) check_tof: Sensor start failed (attempt 263) - check wiring/pull-ups, retrying
+2026-11-10 10:24:25  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 263) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:26  W (4059913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:26  W (4059913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:26  E (4059913) check_tof: Sensor start failed (attempt 264) - check wiring/pull-ups, retrying
+2026-11-10 10:24:26  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 264) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:27  W (4060913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:27  W (4060913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:27  E (4060913) check_tof: Sensor start failed (attempt 265) - check wiring/pull-ups, retrying
+2026-11-10 10:24:27  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 265) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:28  W (4061913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:28  W (4061913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:28  E (4061913) check_tof: Sensor start failed (attempt 266) - check wiring/pull-ups, retrying
+2026-11-10 10:24:28  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 266) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:29  W (4062913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:29  W (4062913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:29  E (4062913) check_tof: Sensor start failed (attempt 267) - check wiring/pull-ups, retrying
+2026-11-10 10:24:29  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 267) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:30  W (4063913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:30  W (4063913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:30  E (4063913) check_tof: Sensor start failed (attempt 268) - check wiring/pull-ups, retrying
+2026-11-10 10:24:30  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 268) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:31  W (4064913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:31  W (4064913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:31  E (4064913) check_tof: Sensor start failed (attempt 269) - check wiring/pull-ups, retrying
+2026-11-10 10:24:31  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 269) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:32  W (4065913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:32  W (4065913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:32  E (4065913) check_tof: Sensor start failed (attempt 270) - check wiring/pull-ups, retrying
+2026-11-10 10:24:32  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 270) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:33  W (4066913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:33  W (4066913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:33  E (4066913) check_tof: Sensor start failed (attempt 271) - check wiring/pull-ups, retrying
+2026-11-10 10:24:33  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 271) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:34  W (4067913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:34  W (4067913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:34  E (4067913) check_tof: Sensor start failed (attempt 272) - check wiring/pull-ups, retrying
+2026-11-10 10:24:34  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 272) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:35  W (4068913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:35  W (4068913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:35  E (4068913) check_tof: Sensor start failed (attempt 273) - check wiring/pull-ups, retrying
+2026-11-10 10:24:35  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 273) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:36  W (4069913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:36  W (4069913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:36  E (4069913) check_tof: Sensor start failed (attempt 274) - check wiring/pull-ups, retrying
+2026-11-10 10:24:36  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 274) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:37  W (4070913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:37  W (4070913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:37  E (4070913) check_tof: Sensor start failed (attempt 275) - check wiring/pull-ups, retrying
+2026-11-10 10:24:37  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 275) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:38  W (4071913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:38  W (4071913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:38  E (4071913) check_tof: Sensor start failed (attempt 276) - check wiring/pull-ups, retrying
+2026-11-10 10:24:38  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 276) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:39  W (4072913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:39  W (4072913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:39  E (4072913) check_tof: Sensor start failed (attempt 277) - check wiring/pull-ups, retrying
+2026-11-10 10:24:39  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 277) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:40  W (4073913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:40  W (4073913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:40  E (4073913) check_tof: Sensor start failed (attempt 278) - check wiring/pull-ups, retrying
+2026-11-10 10:24:40  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 278) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:41  W (4074913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:41  W (4074913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:41  E (4074913) check_tof: Sensor start failed (attempt 279) - check wiring/pull-ups, retrying
+2026-11-10 10:24:41  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 279) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:42  W (4075913) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 10:24:42  W (4075913) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 10:24:42  E (4075913) check_tof: Sensor start failed (attempt 280) - check wiring/pull-ups, retrying
+2026-11-10 10:24:42  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 280) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 10:24:43  [server] lost: Mất kết nối USB (thiết bị đã ngắt) — đang chờ board cắm lại…
+2026-11-10 10:24:43  [server] noport: Không thấy board — hãy cắm cáp USB
+2026-11-10 16:25:49  [server] waiting: Đã mở /dev/ttyACM0 — chờ dữ liệu từ cảm biến…
+2026-11-10 16:25:51  I (2773) check_tof: VL53L8CX ready (ULD VL53L8CX_2.0.0), ranging 8x8 @ 15 Hz
+2026-11-10 16:25:51  [server] live: Đang nhận dữ liệu
+2026-11-10 16:27:00  W (71183) check_tof: Too many I2C errors (last status=3) - restarting sensor
+2026-11-10 16:27:00  W (71183) check_tof: before restart: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:00  W (71923) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:00  W (71923) check_tof: is_alive failed: probe(0x29)=ESP_OK SDA=1 SCL=0
+2026-11-10 16:27:00  E (71923) check_tof: Sensor start failed (attempt 1) - check wiring/pull-ups, retrying
+2026-11-10 16:27:01  W (72123) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:01  W (72123) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:01  E (72123) check_tof: Sensor start failed (attempt 2) - check wiring/pull-ups, retrying
+2026-11-10 16:27:01  W (72323) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:01  W (72323) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:01  E (72323) check_tof: Sensor start failed (attempt 3) - check wiring/pull-ups, retrying
+2026-11-10 16:27:01  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 3) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:01  W (72523) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:01  W (72523) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:01  E (72523) check_tof: Sensor start failed (attempt 4) - check wiring/pull-ups, retrying
+2026-11-10 16:27:01  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 4) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:01  W (72723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:01  W (72723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:01  E (72723) check_tof: Sensor start failed (attempt 5) - check wiring/pull-ups, retrying
+2026-11-10 16:27:01  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 5) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:02  W (73723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:02  W (73723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:02  E (73723) check_tof: Sensor start failed (attempt 6) - check wiring/pull-ups, retrying
+2026-11-10 16:27:02  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 6) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:03  W (74723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:03  W (74723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:03  E (74723) check_tof: Sensor start failed (attempt 7) - check wiring/pull-ups, retrying
+2026-11-10 16:27:03  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 7) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:04  W (75723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:04  W (75723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:04  E (75723) check_tof: Sensor start failed (attempt 8) - check wiring/pull-ups, retrying
+2026-11-10 16:27:04  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 8) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:05  W (76723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:05  W (76723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:05  E (76723) check_tof: Sensor start failed (attempt 9) - check wiring/pull-ups, retrying
+2026-11-10 16:27:05  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 9) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:06  W (77723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:06  W (77723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:06  E (77723) check_tof: Sensor start failed (attempt 10) - check wiring/pull-ups, retrying
+2026-11-10 16:27:06  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 10) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:07  W (78723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:07  W (78723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:07  E (78723) check_tof: Sensor start failed (attempt 11) - check wiring/pull-ups, retrying
+2026-11-10 16:27:07  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 11) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:08  W (79723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:08  W (79723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:08  E (79723) check_tof: Sensor start failed (attempt 12) - check wiring/pull-ups, retrying
+2026-11-10 16:27:08  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 12) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:09  W (80723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:09  W (80723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:09  E (80723) check_tof: Sensor start failed (attempt 13) - check wiring/pull-ups, retrying
+2026-11-10 16:27:09  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 13) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:10  W (81723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:10  W (81723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:10  E (81723) check_tof: Sensor start failed (attempt 14) - check wiring/pull-ups, retrying
+2026-11-10 16:27:10  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 14) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:11  W (82723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:11  W (82723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:11  E (82723) check_tof: Sensor start failed (attempt 15) - check wiring/pull-ups, retrying
+2026-11-10 16:27:11  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 15) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:12  W (83723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:12  W (83723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:12  E (83723) check_tof: Sensor start failed (attempt 16) - check wiring/pull-ups, retrying
+2026-11-10 16:27:12  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 16) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:13  W (84723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:13  W (84723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:13  E (84723) check_tof: Sensor start failed (attempt 17) - check wiring/pull-ups, retrying
+2026-11-10 16:27:13  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 17) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:14  W (85723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:14  W (85723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:14  E (85723) check_tof: Sensor start failed (attempt 18) - check wiring/pull-ups, retrying
+2026-11-10 16:27:14  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 18) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:15  W (86723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:15  W (86723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:15  E (86723) check_tof: Sensor start failed (attempt 19) - check wiring/pull-ups, retrying
+2026-11-10 16:27:15  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 19) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:16  W (87723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:16  W (87723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:16  E (87723) check_tof: Sensor start failed (attempt 20) - check wiring/pull-ups, retrying
+2026-11-10 16:27:16  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 20) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:17  W (88723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:17  W (88723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:17  E (88723) check_tof: Sensor start failed (attempt 21) - check wiring/pull-ups, retrying
+2026-11-10 16:27:17  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 21) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:18  W (89723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:18  W (89723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:18  E (89723) check_tof: Sensor start failed (attempt 22) - check wiring/pull-ups, retrying
+2026-11-10 16:27:18  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 22) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:19  W (90723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:19  W (90723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:19  E (90723) check_tof: Sensor start failed (attempt 23) - check wiring/pull-ups, retrying
+2026-11-10 16:27:19  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 23) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:20  W (91723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:20  W (91723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:20  E (91723) check_tof: Sensor start failed (attempt 24) - check wiring/pull-ups, retrying
+2026-11-10 16:27:20  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 24) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:21  W (92723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:21  W (92723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:21  E (92723) check_tof: Sensor start failed (attempt 25) - check wiring/pull-ups, retrying
+2026-11-10 16:27:21  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 25) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:22  W (93723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:22  W (93723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:22  E (93723) check_tof: Sensor start failed (attempt 26) - check wiring/pull-ups, retrying
+2026-11-10 16:27:22  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 26) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:23  W (94723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:23  W (94723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:23  E (94723) check_tof: Sensor start failed (attempt 27) - check wiring/pull-ups, retrying
+2026-11-10 16:27:23  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 27) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:24  W (95723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:24  W (95723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:24  E (95723) check_tof: Sensor start failed (attempt 28) - check wiring/pull-ups, retrying
+2026-11-10 16:27:24  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 28) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:25  W (96723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:25  W (96723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:25  E (96723) check_tof: Sensor start failed (attempt 29) - check wiring/pull-ups, retrying
+2026-11-10 16:27:25  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 29) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:26  W (97723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:26  W (97723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:26  E (97723) check_tof: Sensor start failed (attempt 30) - check wiring/pull-ups, retrying
+2026-11-10 16:27:26  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 30) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:27  W (98723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:27  W (98723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:27  E (98723) check_tof: Sensor start failed (attempt 31) - check wiring/pull-ups, retrying
+2026-11-10 16:27:27  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 31) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:28  W (99723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:28  W (99723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:28  E (99723) check_tof: Sensor start failed (attempt 32) - check wiring/pull-ups, retrying
+2026-11-10 16:27:28  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 32) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:29  W (100723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:29  W (100723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:29  E (100723) check_tof: Sensor start failed (attempt 33) - check wiring/pull-ups, retrying
+2026-11-10 16:27:29  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 33) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:30  W (101723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:30  W (101723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:30  E (101723) check_tof: Sensor start failed (attempt 34) - check wiring/pull-ups, retrying
+2026-11-10 16:27:30  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 34) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:31  W (102723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:31  W (102723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:31  E (102723) check_tof: Sensor start failed (attempt 35) - check wiring/pull-ups, retrying
+2026-11-10 16:27:31  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 35) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:32  W (103723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:32  W (103723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:32  E (103723) check_tof: Sensor start failed (attempt 36) - check wiring/pull-ups, retrying
+2026-11-10 16:27:32  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 36) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:33  W (104723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:33  W (104723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:33  E (104723) check_tof: Sensor start failed (attempt 37) - check wiring/pull-ups, retrying
+2026-11-10 16:27:33  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 37) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:34  W (105723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:34  W (105723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:34  E (105723) check_tof: Sensor start failed (attempt 38) - check wiring/pull-ups, retrying
+2026-11-10 16:27:34  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 38) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:35  W (106723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:35  W (106723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:35  E (106723) check_tof: Sensor start failed (attempt 39) - check wiring/pull-ups, retrying
+2026-11-10 16:27:35  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 39) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:36  W (107723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:36  W (107723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:36  E (107723) check_tof: Sensor start failed (attempt 40) - check wiring/pull-ups, retrying
+2026-11-10 16:27:36  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 40) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:37  W (108723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:37  W (108723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:37  E (108723) check_tof: Sensor start failed (attempt 41) - check wiring/pull-ups, retrying
+2026-11-10 16:27:37  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 41) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:38  W (109723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:38  W (109723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:38  E (109723) check_tof: Sensor start failed (attempt 42) - check wiring/pull-ups, retrying
+2026-11-10 16:27:38  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 42) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:39  W (110723) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-10 16:27:39  W (110723) check_tof: is_alive failed: probe(0x29)=ESP_ERR_NOT_FOUND SDA=1 SCL=1
+2026-11-10 16:27:39  E (110723) check_tof: Sensor start failed (attempt 43) - check wiring/pull-ups, retrying
+2026-11-10 16:27:39  [server] sensor: Board chạy nhưng không khởi động được cảm biến (lần 43) — kiểm tra dây SDA/SCL/VIN/LPn
+2026-11-10 16:27:39  [server] lost: Mất kết nối USB (thiết bị đã ngắt) — đang chờ board cắm lại…
+2026-11-10 16:27:40  [server] noport: Không thấy board — hãy cắm cáp USB
+2026-11-10 16:28:33  [server] waiting: Đã mở /dev/ttyACM0 — chờ dữ liệu từ cảm biến…
+2026-11-10 16:28:35  I (2773) check_tof: VL53L8CX ready (ULD VL53L8CX_2.0.0), ranging 8x8 @ 15 Hz
+2026-11-10 16:28:35  [server] live: Đang nhận dữ liệu
+2026-11-10 16:31:30  [server] lost: Mất kết nối USB (thiết bị đã ngắt) — đang chờ board cắm lại…
+2026-11-10 16:31:31  [server] noport: Không thấy board — hãy cắm cáp USB
+2026-11-11 08:59:49  [server] noport: Không thấy board — hãy cắm cáp USB
+2026-11-11 09:00:10  [server] waiting: Đã mở /dev/ttyACM0 — chờ dữ liệu từ cảm biến…
+2026-11-11 09:00:12  I (2773) check_tof: VL53L8CX ready (ULD VL53L8CX_2.0.0), ranging 8x8 @ 15 Hz
+2026-11-11 09:00:13  [server] live: Đang nhận dữ liệu
+2026-11-11 09:00:58  [server] waiting: Đã mở /dev/ttyACM0 — chờ dữ liệu từ cảm biến…
+2026-11-11 09:00:58  W (153) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-11 09:00:58  W (153) check_tof: is_alive failed: probe(0x29)=ESP_OK SDA=1 SCL=1
+2026-11-11 09:00:58  E (153) check_tof: Sensor start failed (attempt 1) - check wiring/pull-ups, retrying
+2026-11-11 09:00:58  I (353) check_tof: Loading sensor firmware (takes a few seconds)...
+2026-11-11 09:01:00  I (2793) check_tof: VL53L8CX ready (ULD VL53L8CX_2.0.0), ranging 8x8 @ 15 Hz
+2026-11-11 09:01:00  I (2793) check_tof: CFG zones=64 hz=15 sharpener=1 order=closest i2c_hz=400000
+2026-11-11 09:01:01  [server] live: Đang nhận dữ liệu
+2026-11-11 09:07:02  [server] waiting: Đang reset board…
+2026-11-11 09:07:02  �� �� �� �����   ��� ��� � � �� �� � ��     � � � ���              �  �  �  ��  �   ������ �� ��  � � � ���� � �  �  �               ��  �   �� � �� �    ��     �  ��� ������� �  ��� �  �� �  �   ������� �� �    �� �   � � �� ���  ����  �� �� �� ������  �  �� �� ��  ����  �� �� � ���� � ��  � � �� ���  ����� �� �    ��� ��� ���  � �������  ��� � �   ��  �� � �   � � ������ �����    �� �� �� �    ��  �  ������ �  � �    � �     �� ��� �� �     �  ���� � �� �    ��   �    � ��  �  ������ �  � �    � �      �   ��  �     �  ���� � �� �    �  ��    ��  �  ������ �  � �    � �      � �� � � �     �  ���� � �� �    ��        � ��  � �� � �� ��  �� �     � �      �   ��  �  � ���  � I (23) boot: ESP-IDF v5.5.6 2nd stage bootloader
+2026-11-11 09:07:02  I (24) boot: compile time Nov 11 2026 08:58:27
+2026-11-11 09:07:02  I (24) boot: chip revision: v0.0
+2026-11-11 09:07:02  I (24) boot.esp32c6: SPI Speed      : 80MHz
+2026-11-11 09:07:02  I (25) boot.esp32c6: SPI Mode       : DIO
+2026-11-11 09:07:02  I (25) boot.esp32c6: SPI Flash Size : 2MB
+2026-11-11 09:07:02  I (25) boot: Partition Table:
+2026-11-11 09:07:02  I (26) boot: ## Label            Usage          Type ST Offset   Length
+2026-11-11 09:07:02  I (26) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+2026-11-11 09:07:02  I (27) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+2026-11-11 09:07:02  I (27) boot:  2 factory          factory app      00 00 00010000 00100000
+2026-11-11 09:07:02  I (29) esp_image: segment 0: paddr=00010020 vaddr=42020020 size=20320h (131872) map
+2026-11-11 09:07:02  I (54) esp_image: segment 1: paddr=00030348 vaddr=40800000 size=07cd0h ( 31952) load
+2026-11-11 09:07:02  I (61) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=18b7ch (101244) map
+2026-11-11 09:07:02  I (81) esp_image: segment 3: paddr=00050ba4 vaddr=40807cd0 size=04628h ( 17960) load
+2026-11-11 09:07:02  I (85) esp_image: segment 4: paddr=000551d4 vaddr=4080c300 size=01860h (  6240) load
+2026-11-11 09:07:02  I (90) boot: Loaded app from partition at offset 0x10000
+2026-11-11 09:07:02  I (91) cpu_start: Unicore app
+2026-11-11 09:07:02  I (100) cpu_start: GPIO 17 and 16 are used as console UART I/O pins
+2026-11-11 09:07:02  I (100) cpu_start: Pro cpu start user code
+2026-11-11 09:07:02  I (100) cpu_start: cpu freq: 160000000 Hz
+2026-11-11 09:07:02  I (101) app_init: Application information:
+2026-11-11 09:07:02  I (101) app_init: Project name:     check_tof
+2026-11-11 09:07:02  I (101) app_init: App version:      f0da8c5-dirty
+2026-11-11 09:07:02  I (102) app_init: Compile time:     Nov 11 2026 08:58:44
+2026-11-11 09:07:02  I (102) app_init: ELF file SHA256:  2bfd69f86...
+2026-11-11 09:07:02  I (103) app_init: ESP-IDF:          v5.5.6
+2026-11-11 09:07:02  I (103) efuse_init: Min chip rev:     v0.0
+2026-11-11 09:07:02  I (104) efuse_init: Max chip rev:     v0.99
+2026-11-11 09:07:02  I (104) efuse_init: Chip rev:         v0.0
+2026-11-11 09:07:02  I (105) heap_init: Initializing. RAM available for dynamic allocation:
+2026-11-11 09:07:02  I (106) heap_init: At 4080FAC0 len 0006CB50 (434 KiB): RAM
+2026-11-11 09:07:02  I (106) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM
+2026-11-11 09:07:02  I (107) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM
+2026-11-11 09:07:02  I (109) spi_flash: detected chip: generic
+2026-11-11 09:07:02  I (109) spi_flash: flash io: dio
+2026-11-11 09:07:02  W (109) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+2026-11-11 09:07:02  I (110) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+2026-11-11 09:07:02  I (111) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+2026-11-11 09:07:02  I (112) coexist: coex firmware version: 99f7a27
+2026-11-11 09:07:02  I (112) coexist: coexist rom version 5b8dcfa
+2026-11-11 09:07:02  I (113) main_task: Started on CPU0
+2026-11-11 09:07:02  I (153) main_task: Calling app_main()
+2026-11-11 09:07:02  W (153) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-11 09:07:02  W (153) check_tof: is_alive failed: probe(0x29)=ESP_OK SDA=1 SCL=1
+2026-11-11 09:07:02  E (153) check_tof: Sensor start failed (attempt 1) - check wiring/pull-ups, retrying
+2026-11-11 09:07:02  I (353) check_tof: Loading sensor firmware (takes a few seconds)...
+2026-11-11 09:07:05  I (2793) check_tof: VL53L8CX ready (ULD VL53L8CX_2.0.0), ranging 8x8 @ 15 Hz
+2026-11-11 09:07:05  I (2793) check_tof: CFG zones=64 hz=15 sharpener=1 order=closest i2c_hz=400000
+2026-11-11 09:07:05  [server] live: Đang nhận dữ liệu
+2026-11-11 09:07:07  [server] waiting: Đang reset board…
+2026-11-11 09:07:07  �� �� �� �����   ��� ��� � � �� �� � ��     � � � ���              �  �  �  ��  �   ������ �� ��  � � � ���� � �  �  �               ��  �   �� � �� �    ��     �  ��� ������� �  ��� �  �� �  �   ������� �� �    �� �   � � �� ���  ����  �� �� �� ������  �  �� �� ��  ����  �� �� � ���� � ��  � � �� ���  ����� �� �    ��� ��� ���  � �������  ��� � �   ��  �� � �   � � ������ �����    �� �� �� �    ��  �  ������ �  � �    � �     �� ��� �� �     �  ���� � �� �    ��   �    � ��  �  ������ �  � �    � �      �   ��  �     �  ���� � �� �    �  ��    ��  �  ������ �  � �    � �      � �� � � �     �  ���� � �� �    ��        � ��  � �� � �� ��  �� �     � �      �   ��  �  � ���  � I (23) boot: ESP-IDF v5.5.6 2nd stage bootloader
+2026-11-11 09:07:07  I (24) boot: compile time Nov 11 2026 08:58:27
+2026-11-11 09:07:07  I (24) boot: chip revision: v0.0
+2026-11-11 09:07:07  I (24) boot.esp32c6: SPI Speed      : 80MHz
+2026-11-11 09:07:07  I (25) boot.esp32c6: SPI Mode       : DIO
+2026-11-11 09:07:07  I (25) boot.esp32c6: SPI Flash Size : 2MB
+2026-11-11 09:07:07  I (25) boot: Partition Table:
+2026-11-11 09:07:07  I (26) boot: ## Label            Usage          Type ST Offset   Length
+2026-11-11 09:07:07  I (26) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+2026-11-11 09:07:07  I (27) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+2026-11-11 09:07:07  I (27) boot:  2 factory          factory app      00 00 00010000 00100000
+2026-11-11 09:07:07  I (29) esp_image: segment 0: paddr=00010020 vaddr=42020020 size=20320h (131872) map
+2026-11-11 09:07:07  I (54) esp_image: segment 1: paddr=00030348 vaddr=40800000 size=07cd0h ( 31952) load
+2026-11-11 09:07:07  I (61) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=18b7ch (101244) map
+2026-11-11 09:07:07  I (81) esp_image: segment 3: paddr=00050ba4 vaddr=40807cd0 size=04628h ( 17960) load
+2026-11-11 09:07:07  I (85) esp_image: segment 4: paddr=000551d4 vaddr=4080c300 size=01860h (  6240) load
+2026-11-11 09:07:07  I (90) boot: Loaded app from partition at offset 0x10000
+2026-11-11 09:07:07  I (91) cpu_start: Unicore app
+2026-11-11 09:07:07  I (100) cpu_start: GPIO 17 and 16 are used as console UART I/O pins
+2026-11-11 09:07:07  I (100) cpu_start: Pro cpu start user code
+2026-11-11 09:07:07  I (100) cpu_start: cpu freq: 160000000 Hz
+2026-11-11 09:07:07  I (101) app_init: Application information:
+2026-11-11 09:07:07  I (101) app_init: Project name:     check_tof
+2026-11-11 09:07:07  I (101) app_init: App version:      f0da8c5-dirty
+2026-11-11 09:07:07  I (102) app_init: Compile time:     Nov 11 2026 08:58:44
+2026-11-11 09:07:07  I (102) app_init: ELF file SHA256:  2bfd69f86...
+2026-11-11 09:07:07  I (103) app_init: ESP-IDF:          v5.5.6
+2026-11-11 09:07:07  I (103) efuse_init: Min chip rev:     v0.0
+2026-11-11 09:07:07  I (104) efuse_init: Max chip rev:     v0.99
+2026-11-11 09:07:07  I (104) efuse_init: Chip rev:         v0.0
+2026-11-11 09:07:07  I (105) heap_init: Initializing. RAM available for dynamic allocation:
+2026-11-11 09:07:07  I (106) heap_init: At 4080FAC0 len 0006CB50 (434 KiB): RAM
+2026-11-11 09:07:07  I (106) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM
+2026-11-11 09:07:07  I (107) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM
+2026-11-11 09:07:07  I (109) spi_flash: detected chip: generic
+2026-11-11 09:07:07  I (109) spi_flash: flash io: dio
+2026-11-11 09:07:07  W (109) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+2026-11-11 09:07:07  I (110) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+2026-11-11 09:07:07  I (111) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+2026-11-11 09:07:07  I (112) coexist: coex firmware version: 99f7a27
+2026-11-11 09:07:07  I (112) coexist: coexist rom version 5b8dcfa
+2026-11-11 09:07:07  I (113) main_task: Started on CPU0
+2026-11-11 09:07:07  I (153) main_task: Calling app_main()
+2026-11-11 09:07:07  W (153) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-11 09:07:07  W (153) check_tof: is_alive failed: probe(0x29)=ESP_OK SDA=1 SCL=1
+2026-11-11 09:07:07  E (153) check_tof: Sensor start failed (attempt 1) - check wiring/pull-ups, retrying
+2026-11-11 09:07:07  I (353) check_tof: Loading sensor firmware (takes a few seconds)...
+2026-11-11 09:07:10  I (2793) check_tof: VL53L8CX ready (ULD VL53L8CX_2.0.0), ranging 8x8 @ 15 Hz
+2026-11-11 09:07:10  I (2793) check_tof: CFG zones=64 hz=15 sharpener=1 order=closest i2c_hz=400000
+2026-11-11 09:07:10  [server] live: Đang nhận dữ liệu
+2026-11-11 09:07:12  [server] waiting: Đang reset board…
+2026-11-11 09:07:12  �� �� �� �����   ��� ��� � � �� �� � ��     � � � ���              �  �  �  ��  �   ������ �� ��  � � � ���� � �  �  �               ��  �   �� � �� �    ��     �  ��� ������� �  ��� �  �� �  �   ������� �� �    �� �   � � �� ���  ����  �� �� �� ������  �  �� �� ��  ����  �� �� � ���� � ��  � � �� ���  ����� �� �    ��� ��� ���  � �������  ��� � �   ��  �� � �   � � ������ �����    �� �� �� �    ��  �  ������ �  � �    � �     �� ��� �� �     �  ���� � �� �    ��   �    � ��  �  ������ �  � �    � �      �   ��  �     �  ���� � �� �    �  ��    ��  �  ������ �  � �    � �      � �� � � �     �  ���� � �� �    ��        � ��  � �� � �� ��  �� �     � �      �   ��  �  � ���  � I (23) boot: ESP-IDF v5.5.6 2nd stage bootloader
+2026-11-11 09:07:12  I (24) boot: compile time Nov 11 2026 08:58:27
+2026-11-11 09:07:12  I (24) boot: chip revision: v0.0
+2026-11-11 09:07:12  I (24) boot.esp32c6: SPI Speed      : 80MHz
+2026-11-11 09:07:12  I (25) boot.esp32c6: SPI Mode       : DIO
+2026-11-11 09:07:12  I (25) boot.esp32c6: SPI Flash Size : 2MB
+2026-11-11 09:07:12  I (25) boot: Partition Table:
+2026-11-11 09:07:12  I (26) boot: ## Label            Usage          Type ST Offset   Length
+2026-11-11 09:07:12  I (26) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+2026-11-11 09:07:12  I (27) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+2026-11-11 09:07:12  I (27) boot:  2 factory          factory app      00 00 00010000 00100000
+2026-11-11 09:07:12  I (29) esp_image: segment 0: paddr=00010020 vaddr=42020020 size=20320h (131872) map
+2026-11-11 09:07:12  I (54) esp_image: segment 1: paddr=00030348 vaddr=40800000 size=07cd0h ( 31952) load
+2026-11-11 09:07:12  I (61) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=18b7ch (101244) map
+2026-11-11 09:07:12  I (81) esp_image: segment 3: paddr=00050ba4 vaddr=40807cd0 size=04628h ( 17960) load
+2026-11-11 09:07:12  I (85) esp_image: segment 4: paddr=000551d4 vaddr=4080c300 size=01860h (  6240) load
+2026-11-11 09:07:12  I (90) boot: Loaded app from partition at offset 0x10000
+2026-11-11 09:07:12  I (91) cpu_start: Unicore app
+2026-11-11 09:07:12  I (100) cpu_start: GPIO 17 and 16 are used as console UART I/O pins
+2026-11-11 09:07:12  I (100) cpu_start: Pro cpu start user code
+2026-11-11 09:07:12  I (100) cpu_start: cpu freq: 160000000 Hz
+2026-11-11 09:07:12  I (101) app_init: Application information:
+2026-11-11 09:07:12  I (101) app_init: Project name:     check_tof
+2026-11-11 09:07:12  I (101) app_init: App version:      f0da8c5-dirty
+2026-11-11 09:07:12  I (102) app_init: Compile time:     Nov 11 2026 08:58:44
+2026-11-11 09:07:12  I (102) app_init: ELF file SHA256:  2bfd69f86...
+2026-11-11 09:07:12  I (103) app_init: ESP-IDF:          v5.5.6
+2026-11-11 09:07:12  I (103) efuse_init: Min chip rev:     v0.0
+2026-11-11 09:07:12  I (104) efuse_init: Max chip rev:     v0.99
+2026-11-11 09:07:12  I (104) efuse_init: Chip rev:         v0.0
+2026-11-11 09:07:12  I (105) heap_init: Initializing. RAM available for dynamic allocation:
+2026-11-11 09:07:12  I (106) heap_init: At 4080FAC0 len 0006CB50 (434 KiB): RAM
+2026-11-11 09:07:12  I (106) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM
+2026-11-11 09:07:12  I (107) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM
+2026-11-11 09:07:12  I (109) spi_flash: detected chip: generic
+2026-11-11 09:07:12  I (109) spi_flash: flash io: dio
+2026-11-11 09:07:12  W (109) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+2026-11-11 09:07:12  I (110) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+2026-11-11 09:07:12  I (111) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+2026-11-11 09:07:12  I (112) coexist: coex firmware version: 99f7a27
+2026-11-11 09:07:12  I (112) coexist: coexist rom version 5b8dcfa
+2026-11-11 09:07:12  I (113) main_task: Started on CPU0
+2026-11-11 09:07:12  I (153) main_task: Calling app_main()
+2026-11-11 09:07:12  W (153) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-11 09:07:12  W (153) check_tof: is_alive failed: probe(0x29)=ESP_OK SDA=1 SCL=1
+2026-11-11 09:07:12  E (153) check_tof: Sensor start failed (attempt 1) - check wiring/pull-ups, retrying
+2026-11-11 09:07:12  I (353) check_tof: Loading sensor firmware (takes a few seconds)...
+2026-11-11 09:07:15  I (2793) check_tof: VL53L8CX ready (ULD VL53L8CX_2.0.0), ranging 8x8 @ 15 Hz
+2026-11-11 09:07:15  I (2793) check_tof: CFG zones=64 hz=15 sharpener=1 order=closest i2c_hz=400000
+2026-11-11 09:07:15  [server] live: Đang nhận dữ liệu
+2026-11-11 09:07:17  [server] waiting: Đang reset board…
+2026-11-11 09:07:17  �� �� �� �����   ��� ��� � � �� �� � ��     � � � ���              �  �  �  ��  �   ������ �� ��  � � � ���� � �  �  �               ��  �   �� � �� �    ��     �  ��� ������� �  ��� �  �� �  �   ������� �� �    �� �   � � �� ���  ����  �� �� �� ������  �  �� �� ��  ����  �� �� � ���� � ��  � � �� ���  ����� �� �    ��� ��� ���  � �������  ��� � �   ��  �� � �   � � ������ �����    �� �� �� �    ��  �  ������ �  � �    � �     �� ��� �� �     �  ���� � �� �    ��   �    � ��  �  ������ �  � �    � �      �   ��  �     �  ���� � �� �    �  ��    ��  �  ������ �  � �    � �      � �� � � �     �  ���� � �� �    ��        � ��  � �� � �� ��  �� �     � �      �   ��  �  � ���  � I (23) boot: ESP-IDF v5.5.6 2nd stage bootloader
+2026-11-11 09:07:17  I (24) boot: compile time Nov 11 2026 08:58:27
+2026-11-11 09:07:17  I (24) boot: chip revision: v0.0
+2026-11-11 09:07:17  I (24) boot.esp32c6: SPI Speed      : 80MHz
+2026-11-11 09:07:17  I (25) boot.esp32c6: SPI Mode       : DIO
+2026-11-11 09:07:17  I (25) boot.esp32c6: SPI Flash Size : 2MB
+2026-11-11 09:07:17  I (25) boot: Partition Table:
+2026-11-11 09:07:17  I (26) boot: ## Label            Usage          Type ST Offset   Length
+2026-11-11 09:07:17  I (26) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+2026-11-11 09:07:17  I (27) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+2026-11-11 09:07:17  I (27) boot:  2 factory          factory app      00 00 00010000 00100000
+2026-11-11 09:07:17  I (29) esp_image: segment 0: paddr=00010020 vaddr=42020020 size=20320h (131872) map
+2026-11-11 09:07:17  I (54) esp_image: segment 1: paddr=00030348 vaddr=40800000 size=07cd0h ( 31952) load
+2026-11-11 09:07:17  I (61) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=18b7ch (101244) map
+2026-11-11 09:07:17  I (81) esp_image: segment 3: paddr=00050ba4 vaddr=40807cd0 size=04628h ( 17960) load
+2026-11-11 09:07:17  I (85) esp_image: segment 4: paddr=000551d4 vaddr=4080c300 size=01860h (  6240) load
+2026-11-11 09:07:17  I (90) boot: Loaded app from partition at offset 0x10000
+2026-11-11 09:07:17  I (91) cpu_start: Unicore app
+2026-11-11 09:07:17  I (100) cpu_start: GPIO 17 and 16 are used as console UART I/O pins
+2026-11-11 09:07:17  I (100) cpu_start: Pro cpu start user code
+2026-11-11 09:07:17  I (100) cpu_start: cpu freq: 160000000 Hz
+2026-11-11 09:07:17  I (101) app_init: Application information:
+2026-11-11 09:07:17  I (101) app_init: Project name:     check_tof
+2026-11-11 09:07:17  I (101) app_init: App version:      f0da8c5-dirty
+2026-11-11 09:07:17  I (102) app_init: Compile time:     Nov 11 2026 08:58:44
+2026-11-11 09:07:17  I (102) app_init: ELF file SHA256:  2bfd69f86...
+2026-11-11 09:07:17  I (103) app_init: ESP-IDF:          v5.5.6
+2026-11-11 09:07:17  I (103) efuse_init: Min chip rev:     v0.0
+2026-11-11 09:07:17  I (104) efuse_init: Max chip rev:     v0.99
+2026-11-11 09:07:17  I (104) efuse_init: Chip rev:         v0.0
+2026-11-11 09:07:17  I (105) heap_init: Initializing. RAM available for dynamic allocation:
+2026-11-11 09:07:17  I (106) heap_init: At 4080FAC0 len 0006CB50 (434 KiB): RAM
+2026-11-11 09:07:17  I (106) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM
+2026-11-11 09:07:17  I (107) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM
+2026-11-11 09:07:17  I (109) spi_flash: detected chip: generic
+2026-11-11 09:07:17  I (109) spi_flash: flash io: dio
+2026-11-11 09:07:17  W (109) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+2026-11-11 09:07:17  I (110) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+2026-11-11 09:07:17  I (111) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+2026-11-11 09:07:17  I (112) coexist: coex firmware version: 99f7a27
+2026-11-11 09:07:17  I (112) coexist: coexist rom version 5b8dcfa
+2026-11-11 09:07:17  I (113) main_task: Started on CPU0
+2026-11-11 09:07:17  I (153) main_task: Calling app_main()
+2026-11-11 09:07:17  W (153) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-11 09:07:17  W (153) check_tof: is_alive failed: probe(0x29)=ESP_OK SDA=1 SCL=1
+2026-11-11 09:07:17  E (153) check_tof: Sensor start failed (attempt 1) - check wiring/pull-ups, retrying
+2026-11-11 09:07:17  I (353) check_tof: Loading sensor firmware (takes a few seconds)...
+2026-11-11 09:07:20  I (2793) check_tof: VL53L8CX ready (ULD VL53L8CX_2.0.0), ranging 8x8 @ 15 Hz
+2026-11-11 09:07:20  I (2793) check_tof: CFG zones=64 hz=15 sharpener=1 order=closest i2c_hz=400000
+2026-11-11 09:07:20  [server] live: Đang nhận dữ liệu
+2026-11-11 09:07:22  [server] waiting: Đang reset board…
+2026-11-11 09:07:22  �� �� �� �����   ��� ��� � � �� �� � ��     � � � ���              �  �  �  ��  �   ������ �� ��  � � � ���� � �  �  �               ��  �   �� � �� �    ��     �  ��� ������� �  ��� �  �� �  �   ������� �� �    �� �   � � �� ���  ����  �� �� �� ������  �  �� �� ��  ����  �� �� � ���� � ��  � � �� ���  ����� �� �    ��� ��� ���  � �������  ��� � �   ��  �� � �   � � ������ �����    �� �� �� �    ��  �  ������ �  � �    � �     �� ��� �� �     �  ���� � �� �    ��   �    � ��  �  ������ �  � �    � �      �   ��  �     �  ���� � �� �    �  ��    ��  �  ������ �  � �    � �      � �� � � �     �  ���� � �� �    ��        � ��  � �� � �� ��  �� �     � �      �   ��  �  � ���  � I (23) boot: ESP-IDF v5.5.6 2nd stage bootloader
+2026-11-11 09:07:22  I (24) boot: compile time Nov 11 2026 08:58:27
+2026-11-11 09:07:22  I (24) boot: chip revision: v0.0
+2026-11-11 09:07:22  I (24) boot.esp32c6: SPI Speed      : 80MHz
+2026-11-11 09:07:22  I (25) boot.esp32c6: SPI Mode       : DIO
+2026-11-11 09:07:22  I (25) boot.esp32c6: SPI Flash Size : 2MB
+2026-11-11 09:07:22  I (25) boot: Partition Table:
+2026-11-11 09:07:22  I (26) boot: ## Label            Usage          Type ST Offset   Length
+2026-11-11 09:07:22  I (26) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+2026-11-11 09:07:22  I (27) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+2026-11-11 09:07:22  I (27) boot:  2 factory          factory app      00 00 00010000 00100000
+2026-11-11 09:07:22  I (29) esp_image: segment 0: paddr=00010020 vaddr=42020020 size=20320h (131872) map
+2026-11-11 09:07:22  I (54) esp_image: segment 1: paddr=00030348 vaddr=40800000 size=07cd0h ( 31952) load
+2026-11-11 09:07:22  I (61) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=18b7ch (101244) map
+2026-11-11 09:07:22  I (81) esp_image: segment 3: paddr=00050ba4 vaddr=40807cd0 size=04628h ( 17960) load
+2026-11-11 09:07:22  I (85) esp_image: segment 4: paddr=000551d4 vaddr=4080c300 size=01860h (  6240) load
+2026-11-11 09:07:22  I (90) boot: Loaded app from partition at offset 0x10000
+2026-11-11 09:07:22  I (91) cpu_start: Unicore app
+2026-11-11 09:07:22  I (100) cpu_start: GPIO 17 and 16 are used as console UART I/O pins
+2026-11-11 09:07:22  I (100) cpu_start: Pro cpu start user code
+2026-11-11 09:07:22  I (100) cpu_start: cpu freq: 160000000 Hz
+2026-11-11 09:07:22  I (101) app_init: Application information:
+2026-11-11 09:07:22  I (101) app_init: Project name:     check_tof
+2026-11-11 09:07:22  I (101) app_init: App version:      f0da8c5-dirty
+2026-11-11 09:07:22  I (102) app_init: Compile time:     Nov 11 2026 08:58:44
+2026-11-11 09:07:22  I (102) app_init: ELF file SHA256:  2bfd69f86...
+2026-11-11 09:07:22  I (103) app_init: ESP-IDF:          v5.5.6
+2026-11-11 09:07:22  I (103) efuse_init: Min chip rev:     v0.0
+2026-11-11 09:07:22  I (104) efuse_init: Max chip rev:     v0.99
+2026-11-11 09:07:22  I (104) efuse_init: Chip rev:         v0.0
+2026-11-11 09:07:22  I (105) heap_init: Initializing. RAM available for dynamic allocation:
+2026-11-11 09:07:22  I (106) heap_init: At 4080FAC0 len 0006CB50 (434 KiB): RAM
+2026-11-11 09:07:22  I (106) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM
+2026-11-11 09:07:22  I (107) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM
+2026-11-11 09:07:22  I (109) spi_flash: detected chip: generic
+2026-11-11 09:07:22  I (109) spi_flash: flash io: dio
+2026-11-11 09:07:22  W (109) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+2026-11-11 09:07:22  I (110) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+2026-11-11 09:07:22  I (111) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+2026-11-11 09:07:22  I (112) coexist: coex firmware version: 99f7a27
+2026-11-11 09:07:22  I (112) coexist: coexist rom version 5b8dcfa
+2026-11-11 09:07:22  I (113) main_task: Started on CPU0
+2026-11-11 09:07:22  I (153) main_task: Calling app_main()
+2026-11-11 09:07:22  W (153) check_tof: VL53L8CX not responding (status=3, alive=0)
+2026-11-11 09:07:22  W (153) check_tof: is_alive failed: probe(0x29)=ESP_OK SDA=1 SCL=1
+2026-11-11 09:07:22  E (153) check_tof: Sensor start failed (attempt 1) - check wiring/pull-ups, retrying
+2026-11-11 09:07:22  I (353) check_tof: Loading sensor firmware (takes a few seconds)...
+2026-11-11 09:07:25  I (2793) check_tof: VL53L8CX ready (ULD VL53L8CX_2.0.0), ranging 8x8 @ 15 Hz
+2026-11-11 09:07:25  I (2793) check_tof: CFG zones=64 hz=15 sharpener=1 order=closest i2c_hz=400000
+2026-11-11 09:07:25  [server] live: Đang nhận dữ liệu
+2026-11-11 09:09:06  [server] lost: Mất kết nối USB (thiết bị đã ngắt) — đang chờ board cắm lại…
+2026-11-11 09:09:07  [server] noport: Không thấy board — hãy cắm cáp USB

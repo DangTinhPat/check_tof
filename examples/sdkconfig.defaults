@@ -6,11 +6,10 @@ CONFIG_ESP_MAIN_TASK_STACK_SIZE=8192
 CONFIG_VL53L8CX_I2C_TIMEOUT=y
 CONFIG_VL53L8CX_I2C_TIMEOUT_VALUE=3000
 
-# --- Throughput: only read what the viewer uses (distance, sigma, status) ---
-# Per 8x8 frame this cuts the I2C payload from ~1450 B to ~390 B (about 4x less bus time).
+# --- Throughput: only read what the GUI uses (distance, status, sigma, nb_target_detected) ---
+# Per 8x8 frame this cuts the I2C payload from ~1450 B to ~460 B (about 3x less bus time).
 CONFIG_VL53L8CX_DISABLE_AMBIENT_PER_SPAD=y
 CONFIG_VL53L8CX_DISABLE_NB_SPADS_ENABLED=y
-CONFIG_VL53L8CX_DISABLE_NB_TARGET_DETECTED=y
 CONFIG_VL53L8CX_DISABLE_SIGNAL_PER_SPAD=y
 CONFIG_VL53L8CX_DISABLE_REFLECTANCE_PERCENT=y
 CONFIG_VL53L8CX_DISABLE_MOTION_INDICATOR=y

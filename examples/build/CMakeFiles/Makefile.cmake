@@ -7,6 +7,8 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+  "/home/dvt/check_tof/.git/HEAD"
+  "/home/dvt/check_tof/.git/refs/heads/main"
   "/home/dvt/check_tof/VL53L8CX-Library/CMakeLists.txt"
   "/home/dvt/check_tof/VL53L8CX-Library/idf_component.yml"
   "/home/dvt/check_tof/examples/CMakeLists.txt"
@@ -379,6 +381,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/3.28.3/CMakeASMCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeCXXCompiler.cmake"
+  "CMakeFiles/git-data/HEAD"
+  "CMakeFiles/git-data/grabRef.cmake"
+  "CMakeFiles/git-data/head-ref"
   "config.env"
   "bootloader-prefix/tmp/bootloader-mkdirs.cmake"
   "bootloader-prefix/src/bootloader-stamp/bootloader-source_dirinfo.txt"

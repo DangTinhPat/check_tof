@@ -61,6 +61,13 @@
   input[type=checkbox]{accent-color:var(--accent)}
   select{font:inherit;background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:5px 8px}
   .row button{padding:5px 10px;font-size:13px}
+  .cfg{font:12px var(--mono);color:var(--muted)}
+  button.rec-on{border-color:var(--bad);color:var(--bad)}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{display:inline-flex;align-items:center;gap:6px;padding:4px 9px;border:1px solid var(--line);
+    border-radius:999px;background:var(--panel2);font-size:12px;cursor:pointer;user-select:none}
+  .chip small{color:var(--muted)} .chip b{font:600 12px var(--mono);color:var(--accent);min-width:2ch;text-align:right}
+  .chip.zero{opacity:.45} .chip.on{border-color:var(--accent)}
   .chk{display:flex;align-items:center;gap:6px;color:var(--text);font-size:13px}
   details{margin-top:4px} summary{cursor:pointer;color:var(--muted);font-size:12px}
   pre#log{margin:8px 0 0;max-height:160px;overflow:auto;font:12px var(--mono);color:var(--muted);
@@ -74,6 +81,8 @@
   <h1>VL53L8CX <small>Depth Viewer · 8×8</small></h1>
   <button id="btnReset" title="Khởi động lại ESP32 (qua chân RTS)">Reset board</button>
   <button id="btnPause" aria-pressed="false">Tạm dừng</button>
+  <button id="btnRec" title="Ghi toàn bộ dữ liệu thô vào gui/recordings/*.csv">● Ghi dữ liệu thô</button>
+  <span id="cfgInfo" class="cfg"></span>
   <span class="grow"></span>
   <span id="status" class="pill"><i class="dot"></i><span id="statusText">Đang kết nối tới server…</span></span>
 </header>
@@ -100,7 +109,7 @@
       <button data-cam="low">Nhìn thấp</button>
       <button data-cam="top">Từ trên xuống</button>
     </div>
-    <div class="readout">Lưới 8×8 cùng hướng với bản đồ 2D bên trái. Ô gạch chéo = không đo được.</div>
+    <div class="readout">Lưới 8×8 cùng hướng với bản đồ 2D bên trái. Ô gạch chéo = không có giá trị (mã ở góc = lý do).</div>
   </section>
 
   <section class="card wide">
@@ -111,6 +120,51 @@
       <div class="stat"><span>Xa nhất</span><b id="sMax">–</b></div>
       <div class="stat"><span>Giữa ảnh</span><b id="sCenter">–</b></div>
       <div class="stat"><span>Vật thể (so với nền)</span><b id="sObj">–</b></div>
+      <div class="stat"><span>Chu kỳ frame (ESP)</span><b id="sPeriod">–</b></div>
+      <div class="stat"><span>Frame bị lỡ</span><b id="sMiss">–</b></div>
+    </div>
+  </section>
+
+  <section class="card wide">
+    <h2>Bộ lọc <span>chạy trên trình duyệt · ESP32 chỉ gửi dữ liệu thô</span></h2>
+    <div class="row" style="margin-bottom:12px">
+      <span class="cfg">Hiển thị</span>
+      <select id="dataView">
+        <option value="filtered">Đã lọc</option>
+        <option value="raw">Thô (không lọc gì)</option>
+      </select>
+      <button id="btnFiltDefault">Mặc định bộ lọc</button>
+    </div>
+    <div class="ctl">
+      <label>1 · Status được chấp nhận — số bên phải = số ô có status đó trong frame hiện tại (rê chuột để xem nghĩa)</label>
+      <div id="statusChips" class="chips"></div>
+    </div>
+    <div class="controls" style="margin-top:14px">
+      <div class="ctl">
+        <label class="chk"><input id="sigmaOn" type="checkbox"> 2 · Bỏ ô có sigma &gt; <span id="sigmaVal"></span> mm</label>
+        <input id="sigmaMax" type="range" min="1" max="60" step="1">
+      </div>
+      <div class="ctl">
+        <label>3 · Median theo thời gian (diệt gai nhọn)</label>
+        <select id="median">
+          <option value="1">Tắt (trễ thấp nhất)</option>
+          <option value="3">3 frame (+1 frame trễ khi đổi)</option>
+          <option value="5">5 frame (+2 frame trễ khi đổi)</option>
+        </select>
+      </div>
+      <div class="ctl">
+        <label>4 · Giữ giá trị cũ khi ô mất tạm — <span id="holdVal"></span> frame</label>
+        <input id="holdFrames" type="range" min="0" max="15" step="1">
+      </div>
+      <div class="ctl">
+        <label>5 · Làm mượt — <span id="smVal"></span> · thay đổi &gt; <span id="jumpVal"></span> mm đi thẳng, không trễ</label>
+        <input id="smooth" type="range" min="0" max="0.9" step="0.05">
+        <input id="jumpMm" type="range" min="20" max="500" step="10">
+      </div>
+      <div class="ctl">
+        <label class="chk"><input id="flyOn" type="checkbox"> 6 · Loại điểm lơ lửng ở mép vật (khoảng hở ≥ <span id="flyVal"></span> mm)</label>
+        <input id="flyMm" type="range" min="20" max="400" step="10">
+      </div>
     </div>
   </section>
 
@@ -136,10 +190,8 @@
         </div>
       </div>
       <div class="ctl">
-        <label>Độ nhạy viền mép vật — chênh lệch ≥ <span id="edgeVal">40</span> mm</label>
+        <label>Viền mép vật trên bản đồ — chênh lệch ≥ <span id="edgeVal">40</span> mm</label>
         <input id="edgeMm" type="range" min="10" max="300" step="5">
-        <label>Làm mượt theo thời gian — <span id="smVal">0.40</span></label>
-        <input id="smooth" type="range" min="0" max="0.9" step="0.05">
       </div>
       <div class="ctl">
         <label>Dải màu</label>
@@ -179,6 +231,15 @@
   </section>
 </main>
 
+<div id="jsErr" style="display:none;margin:12px 16px;padding:10px 14px;border-radius:10px;background:#3a1b1b;border:1px solid #6b2a2a;color:#ffc9c9;font:12px ui-monospace,monospace"></div>
+<script>
+  /* show any JavaScript error on the page itself instead of failing silently */
+  window.addEventListener('error', e => {
+    const b = document.getElementById('jsErr'); if (!b) return;
+    b.style.display = 'block'; b.textContent += `Lỗi JavaScript: ${e.message} (${(e.filename || '').split('/').pop()}:${e.lineno})\n`;
+  });
+</script>
+<script src="filters.js"></script>
 <script>
 (() => {
 'use strict';
@@ -187,11 +248,22 @@ const $ = id => document.getElementById(id);
 const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 
 /* ---------- options (remembered in this browser) ---------- */
-const DEFAULTS = { view: 'cells', palette: 'inferno', nums: true, edges: true, edgeMm: 40, smooth: .4,
+const FD = TofFilters.DEFAULT_OPTIONS;
+const FILTER_DEFAULTS = { dataView: 'filtered', fAccept: FD.accept.slice(), sigmaOn: FD.sigmaOn, sigmaMax: FD.sigmaMax,
+                          median: FD.median, holdFrames: FD.holdFrames, smooth: FD.smooth, jumpMm: FD.jumpMm,
+                          flyOn: FD.edgeOn, flyMm: FD.edgeMm };
+const DEFAULTS = { view: 'cells', palette: 'inferno', nums: true, edges: true, edgeMm: 40,
                    rangeMode: 'auto', near: 0, far: 1000, objOnly: false, objMm: 30,
-                   flipH: true, flipV: false, swap: false };
+                   flipH: true, flipV: false, swap: false, ...FILTER_DEFAULTS };
 let opt = { ...DEFAULTS };
 try { Object.assign(opt, JSON.parse(localStorage.getItem('tofviewer.opt') || '{}')); } catch (e) {}
+if (!Array.isArray(opt.fAccept)) opt.fAccept = FD.accept.slice();
+
+/* ---------- filter pipeline (gui/filters.js) ---------- */
+const PIPE = TofFilters.createPipeline(N);
+const filterOpts = () => ({ accept: opt.fAccept, sigmaOn: opt.sigmaOn, sigmaMax: opt.sigmaMax, median: +opt.median,
+                            holdFrames: opt.holdFrames, smooth: opt.smooth, jumpMm: opt.jumpMm,
+                            edgeOn: opt.flyOn, edgeMm: opt.flyMm });
 const saveOpt = () => { try { localStorage.setItem('tofviewer.opt', JSON.stringify(opt)); } catch (e) {} };
 
 /* ---------- state ---------- */
@@ -202,6 +274,8 @@ const S = {
   lo: 0, hi: 1000, hover: -1,
   yaw: .6, pitch: -.45, zoom: 1,
   fpsCount: 0, fpsT: performance.now(), fps: 0,
+  raw: null, why: new Array(NZ).fill(''), held: new Uint8Array(NZ), statusCount: {},
+  tEsp: null, period: 0, missed: 0,
 };
 
 /* ---------- colour ---------- */
@@ -236,11 +310,23 @@ const BGRGB = d => { const v = 38 + 40 * tOf(d) | 0; return [v, v + 3, v + 8]; }
 const css = c => `rgb(${c[0]},${c[1]},${c[2]})`;
 const shadeRGB = (c, k) => [clamp(c[0] * k, 0, 255) | 0, clamp(c[1] * k, 0, 255) | 0, clamp(c[2] * k, 0, 255) | 0];
 
-/* ---------- data in ---------- */
-function ingest(vals, frame) {
-  if (S.bgCollect) {                                    // averaging frames for the background
+/* ---------- data in: raw frame -> filter pipeline ---------- */
+function ingest(f) {
+  // timing from the ESP32 clock: frame period and frames that never arrived
+  if (f.t != null && S.tEsp != null) {
+    const dt = f.t - S.tEsp;
+    if (dt > 0) {
+      if (S.period && dt > 1.5 * S.period) S.missed += Math.round(dt / S.period) - 1;
+      else S.period = S.period ? S.period * .9 + dt * .1 : dt;
+    }
+  }
+  S.tEsp = f.t;
+
+  const out = PIPE.process(f, filterOpts());          // always run, so filter state stays continuous
+
+  if (S.bgCollect) {                                    // background = average of filtered frames
     const C = S.bgCollect;
-    for (let i = 0; i < NZ; i++) if (vals[i] > 0) { C.sum[i] += vals[i]; C.cnt[i]++; }
+    for (let i = 0; i < NZ; i++) if (Number.isFinite(out.v[i])) { C.sum[i] += out.v[i]; C.cnt[i]++; }
     if (++C.n >= 20) {
       for (let i = 0; i < NZ; i++) S.bg[i] = C.cnt[i] >= 8 ? C.sum[i] / C.cnt[i] : NaN;
       S.bgCollect = null; S.bgReady = true;
@@ -249,22 +335,25 @@ function ingest(vals, frame) {
     }
   }
   if (S.paused) return;
-  const a = 1 - opt.smooth;
-  for (let i = 0; i < NZ; i++) {
-    const d = vals[i];
-    if (d > 0) { S.disp[i] = (S.ok[i] && opt.smooth > 0) ? a * d + (1 - a) * S.disp[i] : d; S.ok[i] = 1; }
-    else S.ok[i] = 0;
-  }
-  S.frame = frame; S.got = true; S.dirty = true; S.fpsCount++;
+  S.raw = f; S.why = out.why; S.held = out.held;
+  for (let i = 0; i < NZ; i++) { S.disp[i] = out.v[i]; S.ok[i] = Number.isFinite(out.v[i]) ? 1 : 0; }
+  const cnt = {}; for (const x of f.s) cnt[x] = (cnt[x] || 0) + 1;
+  S.statusCount = cnt;
+  S.frame = f.n; S.got = true; S.dirty = true; S.fpsCount++;
 }
 
 /* view grids (flips applied): V = depth or NaN, B = background, O = 1 if zone is an object */
 const V = new Float32Array(NZ), B = new Float32Array(NZ), O = new Uint8Array(NZ);
+/* per-zone raw details in view order: why rejected, held, status, raw distance, sigma */
+const VW = new Array(NZ).fill(''), VH = new Uint8Array(NZ), VS = new Int16Array(NZ), VR = new Float32Array(NZ), VG = new Float32Array(NZ);
 function buildView() {
+  const f = S.raw, raw = opt.dataView === 'raw';
   for (let r = 0; r < N; r++) for (let c = 0; c < N; c++) {
     const rr = opt.flipV ? N - 1 - r : r, cc = opt.flipH ? N - 1 - c : c;
     const z = opt.swap ? cc * N + rr : rr * N + cc, i = r * N + c;
-    V[i] = S.ok[z] ? S.disp[z] : NaN;
+    VS[i] = f ? f.s[z] : -1; VR[i] = f ? f.d[z] : NaN; VG[i] = f && f.g ? f.g[z] : NaN;
+    if (raw) { V[i] = f && f.d[z] > 0 ? f.d[z] : NaN; VW[i] = ''; VH[i] = 0; }
+    else { V[i] = S.ok[z] ? S.disp[z] : NaN; VW[i] = S.why[z] || ''; VH[i] = S.held[z] || 0; }
     B[i] = S.bg[z];
     O[i] = !isNaN(V[i]) && (!S.bgReady || isNaN(B[i]) || B[i] - V[i] >= opt.objMm) ? 1 : 0;
   }
@@ -311,6 +400,7 @@ function drawCells(W, cw) {
     if (isNaN(d)) { hatch(x, y, cw); continue; }
     mctx.fillStyle = css(isBgZone(i) ? BGRGB(d) : depthRGB(d));
     mctx.fillRect(x, y, cw + .5, cw + .5);
+    if (VH[i]) { mctx.fillStyle = 'rgba(10,12,15,.4)'; mctx.fillRect(x, y, cw + .5, cw + .5); }   // held value
   }
   // thin grid so the 8x8 structure is readable
   mctx.strokeStyle = 'rgba(0,0,0,.25)'; mctx.lineWidth = 1; mctx.beginPath();
@@ -375,12 +465,34 @@ function drawNumbers(cw) {
   }
 }
 
+/* why a zone has no value (corner label), and which zones show a held value (corner mark) */
+function drawStatusMarks(cw) {
+  if (!S.raw) return;
+  const acc = new Set(opt.fAccept), raw = opt.dataView === 'raw';
+  mctx.font = `600 ${Math.round(cw * .17)}px ui-monospace,Menlo,monospace`;
+  mctx.textAlign = 'right'; mctx.textBaseline = 'bottom';
+  for (let r = 0; r < N; r++) for (let c = 0; c < N; c++) {
+    const i = r * N + c, x = c * cw, y = r * cw;
+    if (VH[i]) {
+      mctx.fillStyle = 'rgba(255,255,255,.8)'; mctx.beginPath();
+      mctx.moveTo(x + 3, y + 3); mctx.lineTo(x + 3 + cw * .2, y + 3); mctx.lineTo(x + 3, y + 3 + cw * .2); mctx.fill();
+      continue;
+    }
+    const rejected = raw ? !acc.has(VS[i]) : !!VW[i];
+    if (!rejected) continue;
+    const w = VW[i], label = w === 'sigma' ? 'σ' : w === 'edge' ? 'mép' : String(VS[i]);
+    mctx.fillStyle = raw ? '#ff8f8f' : '#8b95a3';
+    mctx.fillText(label, x + cw - 5, y + cw - 3);
+  }
+}
+
 function draw2D() {
   const W = map.width, cw = W / N;
   mctx.fillStyle = '#14181d'; mctx.fillRect(0, 0, W, W);
   if (opt.view === 'smooth') drawSmooth(W); else drawCells(W, cw);
   if (opt.edges) drawEdges(cw);
   if (opt.nums) drawNumbers(cw);
+  drawStatusMarks(cw);
   if (S.hover >= 0) {
     const r = (S.hover / N) | 0, c = S.hover % N;
     mctx.lineWidth = 3; mctx.strokeStyle = '#4cc2ff'; mctx.strokeRect(c * cw + 2, r * cw + 2, cw - 4, cw - 4);
@@ -492,9 +604,23 @@ function updateUI() {
   $('sMin').textContent = fmt(mn); $('sMax').textContent = fmt(mx);
   $('sCenter').textContent = cs.length ? fmt(cs.reduce((a, b) => a + b) / cs.length) : '–';
   $('sObj').textContent = S.bgReady ? nObj + ' zone' : (S.bgCollect ? 'đang chụp…' : 'chưa chụp nền');
+  $('sPeriod').textContent = S.period ? S.period.toFixed(1) + ' ms' : '–';
+  $('sMiss').textContent = S.got && S.tEsp != null ? String(S.missed) : '–';
+  for (const el of document.querySelectorAll('#statusChips .chip')) {
+    const k = +el.dataset.code, n = S.statusCount[k] || 0;
+    el.querySelector('b').textContent = n; el.classList.toggle('zero', !n);
+  }
   if (S.hover >= 0) {
     const i = S.hover, d = V[i], r = (i / N) | 0, c = i % N;
-    let t = `Zone (hàng ${r}, cột ${c}): ` + (isNaN(d) ? 'không đo được' : Math.round(d) + ' mm');
+    let t = `Zone (hàng ${r}, cột ${c}): ` + (isNaN(d) ? 'không có giá trị' : Math.round(d) + ' mm');
+    if (S.raw) t += ` · thô ${VR[i]} mm · status ${VS[i]} (${TofFilters.STATUS_INFO[VS[i]] || 'không rõ'}) · sigma ${VG[i]} mm`;
+    if (opt.dataView !== 'raw') {
+      if (VH[i]) t += ' · đang giữ giá trị cũ (ô vừa mất)';
+      else if (VW[i] === 'status') t += ' · bị loại: status không được chấp nhận';
+      else if (VW[i] === 'sigma') t += ` · bị loại: sigma > ${opt.sigmaMax} mm`;
+      else if (VW[i] === 'edge') t += ' · bị loại: điểm lơ lửng ở mép vật';
+      else if (VW[i] === 'nodata') t += ' · bị loại: khoảng cách ≤ 0';
+    }
     if (S.bgReady && !isNaN(d) && !isNaN(B[i])) t += ` · nền ${Math.round(B[i])} mm · nhô ra ${Math.round(B[i] - d)} mm`;
     $('readout').textContent = t;
   }
@@ -511,23 +637,62 @@ function frameLoop(t) {
 }
 
 /* ---------- controls ---------- */
+const BOUND = [];
+function labels() {
+  $('smVal').textContent = (+opt.smooth).toFixed(2); $('jumpVal').textContent = opt.jumpMm;
+  $('sigmaVal').textContent = opt.sigmaMax; $('holdVal').textContent = opt.holdFrames; $('flyVal').textContent = opt.flyMm;
+  $('edgeVal').textContent = opt.edgeMm; $('objVal').textContent = opt.objMm;
+  $('near').disabled = $('far').disabled = opt.rangeMode !== 'fixed';
+}
 function bind(id, key, kind) {
   const el = $(id);
-  if (kind === 'bool') el.checked = !!opt[key]; else el.value = opt[key];
+  BOUND.push({ el, key, kind });
   const apply = () => {
     opt[key] = kind === 'bool' ? el.checked : kind === 'num' ? parseFloat(el.value) : el.value;
-    $('smVal').textContent = (+opt.smooth).toFixed(2);
-    $('edgeVal').textContent = opt.edgeMm; $('objVal').textContent = opt.objMm;
-    $('near').disabled = $('far').disabled = opt.rangeMode !== 'fixed';
+    labels();
     if (key === 'palette') buildBar();
     saveOpt(); S.dirty = true;
   };
-  el.addEventListener('input', apply); apply();
+  el.addEventListener('input', apply);
+}
+function syncControls() {
+  for (const { el, key, kind } of BOUND) { if (kind === 'bool') el.checked = !!opt[key]; else el.value = opt[key]; }
+  labels(); buildChips();
 }
 bind('view', 'view'); bind('palette', 'palette'); bind('nums', 'nums', 'bool'); bind('edges', 'edges', 'bool');
-bind('edgeMm', 'edgeMm', 'num'); bind('smooth', 'smooth', 'num'); bind('rangeMode', 'rangeMode');
+bind('edgeMm', 'edgeMm', 'num'); bind('rangeMode', 'rangeMode');
 bind('near', 'near', 'num'); bind('far', 'far', 'num'); bind('objOnly', 'objOnly', 'bool'); bind('objMm', 'objMm', 'num');
 bind('flipH', 'flipH', 'bool'); bind('flipV', 'flipV', 'bool'); bind('swap', 'swap', 'bool');
+bind('dataView', 'dataView'); bind('sigmaOn', 'sigmaOn', 'bool'); bind('sigmaMax', 'sigmaMax', 'num');
+bind('median', 'median', 'num'); bind('holdFrames', 'holdFrames', 'num'); bind('smooth', 'smooth', 'num');
+bind('jumpMm', 'jumpMm', 'num'); bind('flyOn', 'flyOn', 'bool'); bind('flyMm', 'flyMm', 'num');
+
+/* status chips: tick the target_status codes that count as valid */
+const CHIP_CODES = [5, 9, 6, 10, 12, 13, 4, 255, 0, 1, 2, 3, 7, 8, 11];
+const CHIP_SHORT = { 5: 'hợp lệ', 9: 'xung lớn', 6: 'wrap', 10: 'mới xuất hiện', 12: 'nhoè', 13: 'không nhất quán',
+                     4: 'MT không nhất quán', 255: 'không có vật', 0: 'chưa cập nhật', 1: 'tín hiệu yếu', 2: 'lỗi pha',
+                     3: 'sigma cao', 7: 'tốc độ lệch', 8: 'tín hiệu yếu', 11: 'đo lệch' };
+function buildChips() {
+  const box = $('statusChips'); box.textContent = '';
+  for (const code of CHIP_CODES) {
+    const lab = document.createElement('label');
+    lab.className = 'chip'; lab.dataset.code = code; lab.title = `status ${code}: ${TofFilters.STATUS_INFO[code]}`;
+    const cb = document.createElement('input'); cb.type = 'checkbox'; cb.checked = opt.fAccept.includes(code);
+    lab.classList.toggle('on', cb.checked);
+    cb.addEventListener('change', () => {
+      opt.fAccept = CHIP_CODES.filter(k => box.querySelector(`[data-code="${k}"] input`).checked);
+      lab.classList.toggle('on', cb.checked); saveOpt(); S.dirty = true;
+    });
+    const name = document.createElement('span'); name.innerHTML = `${code} <small>${CHIP_SHORT[code]}</small>`;
+    const n = document.createElement('b'); n.textContent = '0';
+    lab.append(cb, name, n); box.append(lab);
+  }
+}
+$('btnFiltDefault').addEventListener('click', () => {
+  Object.assign(opt, FILTER_DEFAULTS, { fAccept: FILTER_DEFAULTS.fAccept.slice() });
+  PIPE.reset(); saveOpt(); syncControls(); S.dirty = true;
+});
+syncControls();
 buildBar();
 
 $('btnBg').addEventListener('click', () => {
@@ -560,10 +725,37 @@ const STATE_CLASS = { live: 'live', waiting: 'live', starting: '', noport: 'err'
 let lastFrameAt = 0;
 
 function handleFrame(f) {
-  if (!f || !Array.isArray(f.d) || f.d.length !== NZ) return;
-  ingest(f.d, f.n);
+  if (!f || !Array.isArray(f.d) || f.d.length !== NZ || !Array.isArray(f.s) || f.s.length !== NZ) return;
+  ingest(f);
   lastFrameAt = performance.now();
 }
+
+function showCfg(c) {
+  $('cfgInfo').textContent = `cảm biến ${c.zones === 64 ? '8×8' : '4×4'} · ${c.hz} Hz · sharpener ${c.sharpener}% · `
+    + `${c.order === 'closest' ? 'vật gần nhất' : 'vật mạnh nhất'} · I²C ${c.i2c_hz / 1000} kHz`;
+}
+
+/* raw-data recording (done by server.py in its own thread) */
+let recTimer = null;
+function showRec(r) {
+  const b = $('btnRec');
+  b.classList.toggle('rec-on', !!r.on);
+  b.textContent = r.on ? `■ Dừng ghi (${Math.round(r.seconds)} s · ${(r.bytes / 1024).toFixed(0)} KB)` : '● Ghi dữ liệu thô';
+  b.title = r.file ? `File: gui/${r.file} · ${r.lines} dòng` + (r.dropped ? ` · ${r.dropped} dòng bị bỏ` : '') : b.title;
+  if (r.on && !recTimer) recTimer = setInterval(pollRec, 1000);
+  if (!r.on && recTimer) { clearInterval(recTimer); recTimer = null; }
+}
+async function pollRec() { try { showRec(await (await fetch('/api/record')).json()); } catch (e) {} }
+$('btnRec').addEventListener('click', async () => {
+  const on = !$('btnRec').classList.contains('rec-on');
+  try {
+    const r = await fetch('/api/record', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+                                           body: JSON.stringify({ on }) });
+    const info = await r.json(); showRec(info);
+    if (!on && info.file) logLine(`[ghi] đã lưu gui/${info.file} (${info.lines} dòng)`);
+  } catch (e) {}
+});
+pollRec();
 
 function startEvents() {
   const es = new EventSource('/events');
@@ -573,6 +765,7 @@ function startEvents() {
     setStatus(st.msg, STATE_CLASS[st.state] ?? '');
   });
   es.addEventListener('frame', e => handleFrame(JSON.parse(e.data)));
+  es.addEventListener('cfg', e => showCfg(JSON.parse(e.data)));
   es.addEventListener('log', e => logLine(JSON.parse(e.data)));
   es.addEventListener('error', () => {
     // server stopped or page opened as a file: EventSource keeps retrying every second
@@ -588,7 +781,7 @@ $('btnReset').addEventListener('click', async () => {
 startEvents();
 
 requestAnimationFrame(frameLoop);
-window.__viewer = { S, opt, ingest, handleFrame };   // for debugging in the console
+window.__viewer = { S, opt, ingest, handleFrame, PIPE };   // for debugging in the console
 })();
 </script>
 </body>

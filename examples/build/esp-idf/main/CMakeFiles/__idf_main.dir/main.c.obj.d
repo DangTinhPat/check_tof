@@ -33,6 +33,9 @@ esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj: \
  /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/assert.h \
  /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/sys/stdio.h \
  /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/14.2.0/include/stdbool.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/string.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/strings.h \
+ /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/sys/string.h \
  /home/dvt/esp/esp-idf/components/log/include/esp_log.h \
  /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/inttypes.h \
  /home/dvt/esp/esp-idf/components/esp_rom/include/esp_rom_sys.h \
@@ -47,9 +50,6 @@ esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj: \
  /home/dvt/esp/esp-idf/components/log/include/esp_log_write.h \
  /home/dvt/esp/esp-idf/components/log/include/esp_log_format.h \
  /home/dvt/esp/esp-idf/components/log/include/esp_log_args.h \
- /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/string.h \
- /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/strings.h \
- /home/dvt/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/riscv32-esp-elf/include/sys/string.h \
  /home/dvt/esp/esp-idf/components/esp_common/include/esp_macros.h \
  /home/dvt/esp/esp-idf/components/esp_common/include/esp_assert.h \
  /home/dvt/esp/esp-idf/components/esp_common/include/esp_compiler.h \

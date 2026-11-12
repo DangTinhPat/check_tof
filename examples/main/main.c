@@ -10,10 +10,18 @@
  *   ESP32-C6 GPIO7 -> SCL/CLK
  *
  * Config: 8x8 zones (64), 1 target per zone, 15 Hz continuous ranging (max for 8x8).
+ * The sensor runs with ST defaults except target order = CLOSEST. No filtering happens
+ * here: every zone is sent as the sensor reports it, all filtering is done in the web GUI.
  *
- * Output (UART, 115200), one line per frame, read by gui/server.py:
- *   F,<frame>,<d0>,<d1>,...,<d63>     distance in mm, row-major, 0 = invalid zone
- * All other lines are ESP-IDF log lines.
+ * Output (UART, 921600 baud), one line per frame, read by gui/server.py:
+ *   F2,<frame>,<t_ms>,<d0..d63>,<s0..s63>,<g0..g63>
+ *     frame : sensor stream counter (0..255, +1 per frame -> gaps = missed frames)
+ *     t_ms  : ESP32 uptime in ms when the frame was read
+ *     d     : distance in mm as reported by the sensor (meaningless if s says so)
+ *     s     : target_status (5 = valid, 9 = valid large pulse, 255 = no target, ...)
+ *     g     : range sigma in mm (estimated uncertainty)
+ *   All values are row-major (row 0 first). All other lines are ESP-IDF log lines;
+ *   at start-up a "CFG ..." log line reports the configuration actually applied.
  *
  * Robustness: the firmware never gives up. If the sensor cannot be initialised it
  * retries forever, and if frames stop arriving while ranging it re-initialises the
@@ -22,6 +30,7 @@
 
 #include <stdio.h>
 #include <stdbool.h>
+#include <string.h>
 #include "esp_log.h"
 #include "esp_timer.h"
 #include "driver/gpio.h"
@@ -34,7 +43,6 @@
 #define I2C_SPEED_HZ       400000   /* 400 kHz; raise only with proper external pull-ups */
 #define RANGING_HZ         15       /* max ranging frequency for 8x8 */
 #define GRID               8        /* 8x8 = 64 zones */
-#define SHARPENER_PERCENT  20       /* 0..99; higher = crisper edges between objects */
 #define FRAME_TIMEOUT_US   1000000  /* no frame for 1 s (expected every ~67 ms) -> restart sensor */
 #define MAX_I2C_ERRORS     10       /* consecutive I2C errors while ranging -> restart sensor */
 
@@ -71,9 +79,7 @@ static bool sensor_start(VL53L8CX_Configuration *dev)
 
     status  = vl53l8cx_set_resolution(dev, VL53L8CX_RESOLUTION_8X8);
     status |= vl53l8cx_set_ranging_frequency_hz(dev, RANGING_HZ);
-    /* Sharper object edges: less blur from a bright/close target into neighbour
-     * zones (ST default is 5%), and report the closest target in each zone. */
-    status |= vl53l8cx_set_sharpener_percent(dev, SHARPENER_PERCENT);
+    /* Report the closest target in each zone. Sharpener stays at the sensor default. */
     status |= vl53l8cx_set_target_order(dev, VL53L8CX_TARGET_ORDER_CLOSEST);
     status |= vl53l8cx_start_ranging(dev);
     if (status) {
@@ -81,21 +87,55 @@ static bool sensor_start(VL53L8CX_Configuration *dev)
         return false;
     }
 
+    /* Read the configuration back from the sensor so the GUI shows what is really applied. */
+    uint8_t res = 0, hz = 0, sharp = 0, order = 0;
+    vl53l8cx_get_resolution(dev, &res);
+    vl53l8cx_get_ranging_frequency_hz(dev, &hz);
+    vl53l8cx_get_sharpener_percent(dev, &sharp);
+    vl53l8cx_get_target_order(dev, &order);
     ESP_LOGI(TAG, "VL53L8CX ready (ULD %s), ranging 8x8 @ %d Hz", VL53L8CX_API_REVISION, RANGING_HZ);
+    ESP_LOGI(TAG, "CFG zones=%u hz=%u sharpener=%u order=%s i2c_hz=%d", res, hz, sharp,
+             order == VL53L8CX_TARGET_ORDER_CLOSEST ? "closest" : "strongest", I2C_SPEED_HZ);
     return true;
 }
 
+/* Append an unsigned/signed integer as decimal text; returns the new end pointer. */
+static char *put_int(char *p, int v)
+{
+    char tmp[12];
+    int n = 0;
+    unsigned u = v < 0 ? (unsigned)(-v) : (unsigned)v;
+    do { tmp[n++] = (char)('0' + u % 10); u /= 10; } while (u);
+    if (v < 0) *p++ = '-';
+    while (n) *p++ = tmp[--n];
+    return p;
+}
+
+/* Send one frame as a single line, written with ONE call so the line is never
+ * interleaved with log output and the UART is busy for the shortest possible time. */
 static void print_frame(const VL53L8CX_Configuration *dev, const VL53L8CX_ResultsData *res)
 {
-    printf("F,%u", dev->streamcount);
-    for (int z = 0; z < GRID * GRID; z++) {
-        int idx = VL53L8CX_NB_TARGET_PER_ZONE * z;
-        uint8_t st = res->target_status[idx];
-        /* status 5 = valid, 9 = valid with large pulse */
-        int valid = (st == 5 || st == 9);
-        printf(",%d", valid ? res->distance_mm[idx] : 0);
+    static char line[1280];   /* worst case: 20 + 64 * (7 + 4 + 6) = 1108 bytes; typical ~650 */
+    char *p = line, *end = line + sizeof(line) - 8;
+    const int nz = GRID * GRID;
+
+    memcpy(p, "F2,", 3); p += 3;
+    p = put_int(p, dev->streamcount); *p++ = ',';
+    p = put_int(p, (int)(esp_timer_get_time() / 1000));
+    for (int z = 0; z < nz && p < end; z++) {                       /* distance (mm) */
+        *p++ = ','; p = put_int(p, res->distance_mm[VL53L8CX_NB_TARGET_PER_ZONE * z]);
     }
-    printf("\n");
+    for (int z = 0; z < nz && p < end; z++) {                       /* status */
+        int st = res->target_status[VL53L8CX_NB_TARGET_PER_ZONE * z];
+        if (res->nb_target_detected[z] == 0) st = 255;              /* ST convention: no target */
+        *p++ = ','; p = put_int(p, st);
+    }
+    for (int z = 0; z < nz && p < end; z++) {                       /* sigma (mm) */
+        *p++ = ','; p = put_int(p, res->range_sigma_mm[VL53L8CX_NB_TARGET_PER_ZONE * z]);
+    }
+    *p++ = '\n';
+    fwrite(line, 1, (size_t)(p - line), stdout);
+    fflush(stdout);
 }
 
 void app_main(void)

@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "check_tof",
-    "project_version":    "1",
+    "project_version":    "f0da8c5-dirty",
     "project_path":       "/home/dvt/check_tof/examples",
     "idf_path":           "/home/dvt/esp/esp-idf",
     "build_dir":          "/home/dvt/check_tof/examples/build",

@@ -29,3 +29,6 @@ Thumbs.db
 *.tmp
 *.bak
 *.orig
+
+# ---- Raw data recordings made from the GUI ----
+gui/recordings/

@@ -5,8 +5,13 @@ bản đồ độ sâu và khối 3D trên trình duyệt theo thời gian thự
 
 ```
  VL53L8CX ──I²C──► ESP32-C6 ──UART/USB──► gui/server.py ──HTTP──► Trình duyệt (bản đồ 2D + 3D)
-                  (examples/)             (giữ cổng serial)       (gui/index.html)
+                  (examples/)             (giữ cổng serial,       (gui/index.html
+                  gửi dữ liệu THÔ          ghi file thô)           + gui/filters.js = TOÀN BỘ bộ lọc)
 ```
+
+**Nguyên tắc:** ESP32 không lọc gì — nó gửi nguyên khoảng cách, `target_status` và sigma của cả 64 ô như
+cảm biến trả về. Mọi quyết định "ô nào tin được" nằm trong trình duyệt và chỉnh được ngay trên giao diện,
+không cần nạp lại firmware.
 
 ## Mục lục
 1. [Cấu trúc thư mục](#1-cấu-trúc-thư-mục)
@@ -30,11 +35,14 @@ check_tof/
 ├── VL53L8CX-Library/      Thư viện ESP-IDF của bên thứ ba (rjrp44/vl53l8cx, ULD v2.0.0 của ST)
 ├── examples/              Firmware của dự án này (project ESP-IDF "check_tof")
 │   ├── CMakeLists.txt         trỏ tới thư viện cục bộ ../VL53L8CX-Library
-│   ├── sdkconfig.defaults     target esp32c6, stack 8192, timeout I²C
-│   └── main/main.c            khởi tạo cảm biến, đo 8×8 @ 15 Hz, in mỗi frame thành một dòng
+│   ├── sdkconfig.defaults     target esp32c6, stack 8192, UART 921600, timeout I²C, tắt output không dùng
+│   └── main/main.c            khởi tạo cảm biến, đo 8×8 @ 15 Hz, gửi mỗi frame thô thành một dòng
 └── gui/
-    ├── server.py              cầu nối serial → HTTP (chỉ dùng thư viện chuẩn của Python)
-    └── index.html             giao diện web (một file, không cần thư viện ngoài)
+    ├── server.py              cầu nối serial → HTTP, ghi dữ liệu thô (chỉ dùng thư viện chuẩn của Python)
+    ├── filters.js             chuỗi bộ lọc (hàm thuần, chạy được cả trong Node để kiểm thử)
+    ├── index.html             giao diện web (không cần thư viện ngoài)
+    ├── recordings/            file ghi dữ liệu thô (*.csv, tạo khi bấm "Ghi dữ liệu thô")
+    └── board.log              log của board kèm giờ (để chẩn đoán sự cố chập chờn)
 ```
 
 ---
@@ -149,7 +157,8 @@ python3 server.py
 
 Rồi mở **http://localhost:8000** trong trình duyệt. Giữ terminal chạy server; nhấn `Ctrl+C` để dừng.
 
-Tuỳ chọn: `python3 server.py --port /dev/ttyACM0 --http 8000 --host 127.0.0.1`
+Tuỳ chọn: `python3 server.py --port /dev/ttyACM0 --baud 921600 --http 8000 --host 127.0.0.1`
+(`--baud` phải khớp `CONFIG_ESP_CONSOLE_UART_BAUDRATE` của firmware).
 
 **Cách hoạt động.** `server.py` là chương trình **duy nhất** mở cổng serial. Trình duyệt chỉ nhận dữ liệu
 từ server qua HTTP (Server-Sent Events), nên mở nhiều tab hoặc nhiều trình duyệt cùng lúc không giành
@@ -164,11 +173,35 @@ cổng với nhau. Server tự kết nối lại khi rút/cắm cáp, và báo r
   sẵn (Nghiêng / Nhìn thấp / Từ trên xuống).
 - **Chụp nền:** chụp lúc cảnh trống, sau đó chỉ vật mới xuất hiện được tô màu, nền chuyển xám. Rê chuột
   hiện vật nhô ra bao nhiêu mm so với nền.
-- **Tuỳ chỉnh:** làm mượt theo thời gian (EMA), độ nhạy viền mép, dải màu tự động hoặc cố định,
-  lật ngang / lật dọc / đổi X↔Y. Các tuỳ chọn được nhớ trong trình duyệt.
+- **Bộ lọc** (xem mục bên dưới) và **Tuỳ chỉnh** hiển thị: viền mép, dải màu tự động hoặc cố định,
+  lật ngang / lật dọc / đổi X↔Y. Mọi tuỳ chọn được nhớ trong trình duyệt.
+- **Ghi dữ liệu thô:** nút trên thanh trên cùng; ghi mọi frame thô và log của board vào
+  `gui/recordings/<giờ>.csv` (khoảng 29 MB mỗi giờ). Việc ghi chạy trong luồng riêng nên không làm chậm hình.
+- **Dòng cấu hình:** cạnh nút ghi, hiện cấu hình thật đọc lại từ cảm biến (độ phân giải, Hz, sharpener,
+  thứ tự vật, tốc độ I²C).
+- **Thống kê:** FPS, số ô có giá trị, gần/xa nhất, chu kỳ frame đo bằng đồng hồ ESP32, số frame bị lỡ.
 - **Nút Reset board:** khởi động lại ESP32 qua chân RTS. **Tạm dừng:** đóng băng hình.
 - **Thanh trạng thái (góc phải):** cho biết đang nhận dữ liệu, mất kết nối USB, cổng bận (kèm tên chương
   trình đang giữ cổng), hay board chạy nhưng không khởi động được cảm biến.
+
+### Bộ lọc (chạy trong trình duyệt, file `gui/filters.js`)
+
+Chuỗi xử lý, theo thứ tự; mỗi bước bật/tắt và chỉnh được trên giao diện:
+
+| # | Bước | Việc làm | Mặc định |
+|---|---|---|---|
+| 1 | Status | chỉ giữ ô có `target_status` được tích chọn; mỗi nút hiện số ô có status đó ở frame hiện tại | 5, 9 |
+| 2 | Sigma | bỏ ô có độ bất định ước lượng lớn | ≤ 15 mm |
+| 3 | Median theo thời gian | diệt giá trị nhảy vọt đơn lẻ (thêm 1 frame trễ khi khoảng cách đổi) | 3 frame |
+| 4 | Giữ giá trị | ô mất tạm thời vẫn hiện giá trị cũ vài frame | 3 frame |
+| 5 | Làm mượt | trung bình trượt; thay đổi lớn hơn ngưỡng đi thẳng, không trễ | 0.4, ngưỡng 100 mm |
+| 6 | Điểm lơ lửng ở mép vật | bỏ ô nằm giữa một vùng gần và một vùng xa | tắt |
+
+- **Hiển thị: Thô** cho xem dữ liệu không lọc gì, để so sánh.
+- Ô không có giá trị hiện **mã lý do ở góc** (số status, `σ` = sigma, `mép`); ô đang giữ giá trị cũ có tam giác
+  trắng ở góc. Rê chuột hiện giá trị thô, status kèm nghĩa, sigma và lý do bị loại.
+- Đo trên 448 frame thật: bộ lọc mặc định giảm nhiễu giữa hai frame (p95) từ **34 mm xuống 6.9 mm** và vẫn giữ
+  **96%** số ô có giá trị. Mỗi frame tốn khoảng 30 µs.
 
 **Kiểm tra hướng ảnh:** đưa tay vào phía trên-bên trái cảm biến (nhìn từ phía sau cảm biến). Nếu ô sáng lên
 sai góc thì chỉnh ở mục "Hướng ảnh". Mặc định bật "Lật ngang"; hãy xác nhận trên phần cứng của bạn.
@@ -189,18 +222,30 @@ sai góc thì chỉnh ở mục "Hướng ảnh". Mặc định bật "Lật nga
 
 ## 8. Định dạng dữ liệu
 
-Firmware in mỗi frame thành **một dòng** trên UART (115200 baud):
+Firmware gửi mỗi frame thành **một dòng thô** trên UART (**921600 baud**), ghi ra bằng một lệnh duy nhất:
 
 ```
-F,<số frame>,<d0>,<d1>,...,<d63>
+F2,<frame>,<t_ms>,<d0..d63>,<s0..s63>,<g0..g63>
 ```
 
-- `d0…d63`: khoảng cách (mm), **theo từng hàng** (hàng 0 trước), `0` = vùng không hợp lệ.
-- Mọi dòng khác là log của ESP-IDF; `server.py` chuyển chúng vào mục "Log từ board" trên web.
-- Tần số khoảng 15 dòng/giây, mỗi dòng khoảng 330 byte.
+| Trường | Ý nghĩa |
+|---|---|
+| `frame` | bộ đếm của cảm biến (0–255). Lưu ý: nó **tăng 4 mỗi frame**, nên không dùng để đếm frame lỡ |
+| `t_ms` | thời gian chạy của ESP32 (ms) lúc đọc frame; giao diện dùng nó để đo chu kỳ và frame bị lỡ |
+| `d` | khoảng cách (mm) như cảm biến báo, kể cả ô không hợp lệ |
+| `s` | `target_status` (5 = hợp lệ, 9 = hợp lệ xung lớn, 255 = không có vật, …) |
+| `g` | sigma (mm), độ bất định ước lượng |
 
-`server.py` cung cấp thêm: `GET /events` (luồng SSE: `frame`, `status`, `log`), `GET /api/status`,
-`POST /api/reset`.
+- Các mảng theo **từng hàng** (hàng 0 trước). Khoảng 650 byte mỗi dòng, 15 dòng/giây (khoảng 11% băng thông UART).
+- Khi khởi động, firmware in một dòng log `CFG zones=… hz=… sharpener=… order=… i2c_hz=…` với cấu hình thật.
+- Mọi dòng khác là log của ESP-IDF; `server.py` chuyển chúng vào mục "Log từ board" và ghi vào `gui/board.log`.
+- `server.py` vẫn đọc được định dạng cũ `F,<frame>,<64 khoảng cách>` của firmware trước đây.
+
+`server.py` cung cấp: `GET /events` (luồng SSE: `frame`, `status`, `log`, `cfg`), `GET /api/status`,
+`POST /api/reset`, `GET`/`POST /api/record` (bật/tắt ghi: `{"on": true}`).
+
+**Realtime:** chu kỳ đo được 67–68 ms ở phía ESP32; độ giật khi tới máy tính khoảng 1.6 ms (độ lệch chuẩn).
+Tab trình duyệt nào xử lý chậm sẽ bị bỏ frame **cũ** trước, nên luôn hiện dữ liệu mới nhất.
 
 ---
 
@@ -213,13 +258,19 @@ Các hằng số đầu `examples/main/main.c`:
 | `PIN_SDA` / `PIN_SCL` | 6 / 7 | chân I²C |
 | `I2C_SPEED_HZ` | 400000 | tốc độ I²C |
 | `RANGING_HZ` | 15 | tần số đo (8×8 tối đa 15) |
-| `SHARPENER_PERCENT` | 20 | 0–99, cao hơn = mép vật sắc hơn |
 | `FRAME_TIMEOUT_US` | 1 s | không có frame trong khoảng này → khởi động lại cảm biến |
 | `MAX_I2C_ERRORS` | 10 | số lỗi I²C liên tiếp trước khi khởi động lại cảm biến |
 
 Muốn đổi sang 4×4 ở tần số cao hơn: đổi `VL53L8CX_RESOLUTION_8X8` thành `_4X4` và `RANGING_HZ` (tối đa
-khoảng 60), đồng thời sửa `GRID`, hằng `NZ`/`N` và hệ số trong `gui/index.html` cùng độ dài dòng `F,` trong
-`gui/server.py` (hiện cố định 64 giá trị).
+khoảng 60), đồng thời sửa `GRID`, hằng `NZ`/`N` trong `gui/index.html`, `N` khi tạo pipeline trong
+`gui/filters.js` và `NZ` trong `gui/server.py` (hiện cố định 64 giá trị).
+
+**Cảm biến chạy theo mặc định của ST**, chỉ đặt độ phân giải, tần số và thứ tự vật `CLOSEST`. Sharpener để
+mặc định (đọc ra là 1%). Firmware không lọc ô nào.
+
+**Output được đọc từ cảm biến** (đặt trong `sdkconfig.defaults`): khoảng cách, status, sigma và số vật phát hiện
+(dùng để báo status 255 khi không có vật). Ambient, số SPAD, tín hiệu, độ phản xạ và motion bị tắt để giảm
+lưu lượng I²C (khoảng 460 byte mỗi frame thay vì 1450 byte).
 
 **Độ bền của firmware:** không bao giờ bỏ cuộc. Nếu khởi tạo cảm biến lỗi thì thử lại mãi; nếu đang đo mà
 ngừng có frame hoặc lỗi I²C liên tục thì tự khởi động lại cảm biến.
